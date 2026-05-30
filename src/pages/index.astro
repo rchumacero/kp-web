@@ -2,6 +2,8 @@
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
 import tasks from "../data/tasks.json";
+import products from "../data/products.json";
+import customers from "../data/customers.json";
 
 const currentYear = new Date().getFullYear();
 const yearsOfExperience = currentYear - 2012;
@@ -596,60 +598,18 @@ const yearsOfExperience = currentYear - 2012;
 
 				<!-- Grid of ERP modules -->
 				<div class="modules-subgrid">
-					<div class="module-card glass-card">
-						<h4 data-i18n="products.item1.title">
-							Facturación Computarizada
-						</h4>
-						<p data-i18n="products.item1.desc">
-							Módulo de emisión fiscal robusto, homologado con la
-							normativa local vigente.
-						</p>
-					</div>
-					<div class="module-card glass-card">
-						<h4 data-i18n="products.item2.title">
-							Gestión de Colas
-						</h4>
-						<p data-i18n="products.item2.desc">
-							Monitoreo, distribución y optimización de la
-							atención al cliente en tiempo real.
-						</p>
-					</div>
-					<div class="module-card glass-card">
-						<h4 data-i18n="products.item3.title">
-							Contabilidad y Presupuestos
-						</h4>
-						<p data-i18n="products.item3.desc">
-							Estados financieros integrados, control
-							presupuestario y balances en vivo.
-						</p>
-					</div>
-					<div class="module-card glass-card">
-						<h4 data-i18n="products.item4.title">
-							Activos Fijos y Almacenes
-						</h4>
-						<p data-i18n="products.item4.desc">
-							Seguimiento de valorización, depreciación y control
-							estricto de inventarios.
-						</p>
-					</div>
-					<div class="module-card glass-card">
-						<h4 data-i18n="products.item5.title">
-							Planillas & Recursos Humanos
-						</h4>
-						<p data-i18n="products.item5.desc">
-							Cálculo exacto de salarios, planillas de aportes
-							fiscales e historial laboral.
-						</p>
-					</div>
-					<div class="module-card glass-card">
-						<h4 data-i18n="products.item6.title">
-							Gestión Documental (Core)
-						</h4>
-						<p data-i18n="products.item6.desc">
-							Estructuración de flujos documentales, firmas
-							digitales e histórico corporativo.
-						</p>
-					</div>
+					{
+						products.map((product) => (
+							<div class="module-card glass-card">
+								<h4 data-i18n={`${product.i18nKey}.title`}>
+									{product.defaultTitle}
+								</h4>
+								<p data-i18n={`${product.i18nKey}.desc`}>
+									{product.defaultDesc}
+								</p>
+							</div>
+						))
+					}
 				</div>
 			</div>
 		</div>
@@ -729,125 +689,24 @@ const yearsOfExperience = currentYear - 2012;
 			</div>
 
 			<div class="customers-grid">
-				<!-- Client 1 -->
-				<div class="client-card glass-card">
-					<div class="client-header">
-						<img
-							src="/clientes/boa.jpg"
-							alt="BOA Logo"
-							class="client-logo-img"
-						/>
-						<h4>Boliviana de Aviación</h4>
-					</div>
-					<p class="client-desc" data-i18n="customers.client1.desc">
-						Desarrollo e Implementación del ERP-BOA con los módulos
-						de Contabilidad, Presupuestos, Almacenes, Recursos
-						Humanos, Activos Fijos y Tesorería.
-					</p>
-					<span class="client-tech"
-						>PXP Framework • PostgreSQL • JavaScript</span
-					>
-				</div>
-
-				<!-- Client 2 -->
-				<div class="client-card glass-card">
-					<div class="client-header">
-						<img
-							src="/clientes/comibol.png"
-							alt="COMIBOL Logo"
-							class="client-logo-img"
-						/>
-						<h4>Corporación Minera de Bolivia</h4>
-					</div>
-					<p class="client-desc" data-i18n="customers.client2.desc">
-						Implementación y adecuación de módulos de Almacenes,
-						Recursos Humanos y Activos Fijos del ERP centralizado
-						junto a facturación a medida.
-					</p>
-					<span class="client-tech"
-						>PXP Framework • PostgreSQL • JavaScript</span
-					>
-				</div>
-
-				<!-- Client 3 -->
-				<div class="client-card glass-card">
-					<div class="client-header">
-						<img
-							src="/clientes/logistica.jpg"
-							alt="YPFB Logística Logo"
-							class="client-logo-img"
-						/>
-						<h4>YPFB Logística S.A.</h4>
-					</div>
-					<p class="client-desc" data-i18n="customers.client3.desc">
-						Diseño e implementación especializada del sistema de
-						control y Mantenimiento Industrial crítico para la
-						cadena logística de hidrocarburos.
-					</p>
-					<span class="client-tech"
-						>PXP Framework • PostgreSQL • PHP</span
-					>
-				</div>
-
-				<!-- Client 4 -->
-				<div class="client-card glass-card">
-					<div class="client-header">
-						<img
-							src="/clientes/etr.png"
-							alt="ENDE Transmisión Logo"
-							class="client-logo-img"
-						/>
-						<h4>ENDE Transmisión</h4>
-					</div>
-					<p class="client-desc" data-i18n="customers.client4.desc">
-						Implementación completa del Sistema Administrativo
-						Financiero ERP-BOA para el control de operaciones de la
-						red eléctrica nacional.
-					</p>
-					<span class="client-tech"
-						>PXP Framework • PostgreSQL • PHP</span
-					>
-				</div>
-
-				<!-- Client 5 -->
-				<div class="client-card glass-card">
-					<div class="client-header">
-						<img
-							src="/clientes/ofep.jpg"
-							alt="OFEP Logo"
-							class="client-logo-img"
-						/>
-						<h4>OFEP</h4>
-					</div>
-					<p class="client-desc" data-i18n="customers.client5.desc">
-						Servicio de formación técnica y consultoría avanzada en
-						módulos integrales del ERP PXP (Seguridad, Flujos de
-						Trabajo, Compras).
-					</p>
-					<span class="client-tech"
-						>PXP Framework • HTML5 • jQuery</span
-					>
-				</div>
-
-				<!-- Client 6 -->
-				<div class="client-card glass-card">
-					<div class="client-header">
-						<img
-							src="/clientes/logo-diamond-resorts-1.jpg"
-							alt="Diamond Resorts Logo"
-							class="client-logo-img"
-						/>
-						<h4>Diamond Resorts</h4>
-					</div>
-					<p class="client-desc" data-i18n="customers.client6.desc">
-						Arquitectura y desarrollo de soluciones móviles e
-						integraciones de bases de datos para sistemas hoteleros
-						internacionales.
-					</p>
-					<span class="client-tech"
-						>Python • JavaScript • Oracle PL/SQL</span
-					>
-				</div>
+				{
+					customers.map((client) => (
+						<div class="client-card glass-card">
+							<div class="client-header">
+								<img
+									src={client.logoUrl}
+									alt={`${client.name} Logo`}
+									class="client-logo-img"
+								/>
+								<h4>{client.name}</h4>
+							</div>
+							<p class="client-desc" data-i18n={`${client.i18nKey}.desc`}>
+								{client.defaultDesc}
+							</p>
+							<span class="client-tech">{client.tech}</span>
+						</div>
+					))
+				}
 			</div>
 		</div>
 	</section>

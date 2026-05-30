@@ -1,0 +1,38 @@
+[
+  {
+    "id": "facturacion",
+    "i18nKey": "products.item1",
+    "defaultTitle": "Facturación Computarizada",
+    "defaultDesc": "Módulo de emisión fiscal robusto, homologado con la normativa local vigente."
+  },
+  {
+    "id": "colas",
+    "i18nKey": "products.item2",
+    "defaultTitle": "Gestión de Colas",
+    "defaultDesc": "Monitoreo, distribución y optimización de la atención al cliente en tiempo real."
+  },
+  {
+    "id": "contabilidad",
+    "i18nKey": "products.item3",
+    "defaultTitle": "Contabilidad y Presupuestos",
+    "defaultDesc": "Estados financieros integrados, control presupuestario y balances en vivo."
+  },
+  {
+    "id": "activos",
+    "i18nKey": "products.item4",
+    "defaultTitle": "Activos Fijos y Almacenes",
+    "defaultDesc": "Seguimiento de valorización, depreciación y control estricto de inventarios."
+  },
+  {
+    "id": "rrhh",
+    "i18nKey": "products.item5",
+    "defaultTitle": "Planillas & Recursos Humanos",
+    "defaultDesc": "Cálculo exacto de salarios, planillas de aportes fiscales e historial laboral."
+  },
+  {
+    "id": "documental",
+    "i18nKey": "products.item6",
+    "defaultTitle": "Gestión Documental (Core)",
+    "defaultDesc": "Estructuración de flujos documentales, firmas digitales e histórico corporativo."
+  }
+]

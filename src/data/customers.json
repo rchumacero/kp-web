@@ -1,0 +1,50 @@
+[
+  {
+    "id": "boa",
+    "logoUrl": "/clientes/boa.jpg",
+    "name": "Boliviana de Aviación",
+    "i18nKey": "customers.client1",
+    "tech": "PXP Framework • PostgreSQL • JavaScript",
+    "defaultDesc": "Desarrollo e Implementación del ERP-BOA con los módulos de Contabilidad, Presupuestos, Almacenes, Recursos Humanos, Activos Fijos y Tesorería."
+  },
+  {
+    "id": "comibol",
+    "logoUrl": "/clientes/comibol.png",
+    "name": "Corporación Minera de Bolivia",
+    "i18nKey": "customers.client2",
+    "tech": "PXP Framework • PostgreSQL • JavaScript",
+    "defaultDesc": "Implementación y adecuación de módulos de Almacenes, Recursos Humanos y Activos Fijos del ERP centralizado junto a facturación a medida."
+  },
+  {
+    "id": "ypfb",
+    "logoUrl": "/clientes/logistica.jpg",
+    "name": "YPFB Logística S.A.",
+    "i18nKey": "customers.client3",
+    "tech": "PXP Framework • PostgreSQL • PHP",
+    "defaultDesc": "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos."
+  },
+  {
+    "id": "ende",
+    "logoUrl": "/clientes/etr.png",
+    "name": "ENDE Transmisión",
+    "i18nKey": "customers.client4",
+    "tech": "PXP Framework • PostgreSQL • PHP",
+    "defaultDesc": "Implementación completa del Sistema Administrativo Financiero ERP-BOA para el control de operaciones de la red eléctrica nacional."
+  },
+  {
+    "id": "ofep",
+    "logoUrl": "/clientes/ofep.jpg",
+    "name": "OFEP",
+    "i18nKey": "customers.client5",
+    "tech": "PXP Framework • HTML5 • jQuery",
+    "defaultDesc": "Servicio de formación técnica y consultoría avanzada en módulos integrales del ERP PXP (Seguridad, Flujos de Trabajo, Compras)."
+  },
+  {
+    "id": "diamond",
+    "logoUrl": "/clientes/logo-diamond-resorts-1.jpg",
+    "name": "Diamond Resorts",
+    "i18nKey": "customers.client6",
+    "tech": "Python • JavaScript • Oracle PL/SQL",
+    "defaultDesc": "Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales."
+  }
+]
