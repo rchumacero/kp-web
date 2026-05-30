@@ -511,28 +511,66 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 				</p>
 			</div>
 
-			<div class="services-grid">
-				{
-					tasks.map((task) => (
-						<div class="service-card glow-card">
-							<div class="service-icon-wrap">
-								<svg
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
-									xmlns="http://www.w3.org/2000/svg"
-									set:html={task.icon}
-								/>
+			<div class="scroll-wrapper">
+				<button
+					class="scroll-btn prev-btn"
+					data-target="tasks-scroll-grid"
+					aria-label="Previous"
+				>
+					<svg
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2.5"
+							d="M15 19l-7-7 7-7"></path>
+					</svg>
+				</button>
+				<div class="services-grid" id="tasks-scroll-grid">
+					{
+						tasks.map((task) => (
+							<div class="service-card glow-card">
+								<div class="service-icon-wrap">
+									<svg
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+										set:html={task.icon}
+									/>
+								</div>
+								<h3 data-i18n={`${task.i18nKey}.title`}>
+									{task.defaultTitle}
+								</h3>
+								<p data-i18n={`${task.i18nKey}.desc`}>
+									{task.defaultDesc}
+								</p>
 							</div>
-							<h3 data-i18n={`${task.i18nKey}.title`}>
-								{task.defaultTitle}
-							</h3>
-							<p data-i18n={`${task.i18nKey}.desc`}>
-								{task.defaultDesc}
-							</p>
-						</div>
-					))
-				}
+						))
+					}
+				</div>
+				<button
+					class="scroll-btn next-btn"
+					data-target="tasks-scroll-grid"
+					aria-label="Next"
+				>
+					<svg
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2.5"
+							d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</section>
@@ -605,7 +643,26 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 				</div>
 
 				<!-- Grid of ERP modules -->
-				<div class="modules-subgrid">
+			<div class="scroll-wrapper">
+				<button
+					class="scroll-btn prev-btn"
+					data-target="products-scroll-grid"
+					aria-label="Previous"
+				>
+					<svg
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2.5"
+							d="M15 19l-7-7 7-7"></path>
+					</svg>
+				</button>
+				<div class="modules-subgrid" id="products-scroll-grid">
 					{
 						products.map((product) => (
 							<div class="module-card glass-card">
@@ -619,6 +676,25 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 						))
 					}
 				</div>
+				<button
+					class="scroll-btn next-btn"
+					data-target="products-scroll-grid"
+					aria-label="Next"
+				>
+					<svg
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2.5"
+							d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
+			</div>
 			</div>
 		</div>
 	</section>
@@ -696,28 +772,66 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 				</p>
 			</div>
 
-			<div class="customers-grid">
-				{
-					customers.map((client) => (
-						<div class="client-card glass-card">
-							<div class="client-header">
-								<img
-									src={client.logoUrl}
-									alt={`${client.name} Logo`}
-									class="client-logo-img"
-								/>
-								<h4>{client.name}</h4>
+			<div class="scroll-wrapper">
+				<button
+					class="scroll-btn prev-btn"
+					data-target="customers-scroll-grid"
+					aria-label="Previous"
+				>
+					<svg
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2.5"
+							d="M15 19l-7-7 7-7"></path>
+					</svg>
+				</button>
+				<div class="customers-grid" id="customers-scroll-grid">
+					{
+						customers.map((client) => (
+							<div class="client-card glass-card">
+								<div class="client-header">
+									<img
+										src={client.logoUrl}
+										alt={`${client.name} Logo`}
+										class="client-logo-img"
+									/>
+									<h4>{client.name}</h4>
+								</div>
+								<p
+									class="client-desc"
+									data-i18n={`${client.i18nKey}.desc`}
+								>
+									{client.defaultDesc}
+								</p>
+								<span class="client-tech">{client.tech}</span>
 							</div>
-							<p
-								class="client-desc"
-								data-i18n={`${client.i18nKey}.desc`}
-							>
-								{client.defaultDesc}
-							</p>
-							<span class="client-tech">{client.tech}</span>
-						</div>
-					))
-				}
+						))
+					}
+				</div>
+				<button
+					class="scroll-btn next-btn"
+					data-target="customers-scroll-grid"
+					aria-label="Next"
+				>
+					<svg
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2.5"
+							d="M9 5l7 7-7 7"></path>
+					</svg>
+				</button>
 			</div>
 		</div>
 	</section>
@@ -1012,4 +1126,23 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 	if (savedLang !== "es") {
 		setLanguage(savedLang);
 	}
+
+	// Scroll buttons navigation logic for horizontal grids
+	document.querySelectorAll(".scroll-btn").forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const targetId = btn.getAttribute("data-target");
+			const grid = document.getElementById(targetId);
+			if (grid) {
+				const direction = btn.classList.contains("prev-btn") ? -1 : 1;
+				const firstCard = grid.firstElementChild as HTMLElement;
+				const cardWidth = firstCard ? firstCard.offsetWidth : 350;
+				const gap = parseInt(window.getComputedStyle(grid).gap) || 24;
+				const scrollAmount = (cardWidth + gap) * 2; // scroll two cards at a time
+				grid.scrollBy({
+					left: direction * scrollAmount,
+					behavior: "smooth",
+				});
+			}
+		});
+	});
 </script>
