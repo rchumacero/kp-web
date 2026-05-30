@@ -9,8 +9,9 @@ import enDict from "../data/i18n/en.json";
 import ptDict from "../data/i18n/pt.json";
 import "../styles/landing.css";
 
+const initialYear = 2012;
 const currentYear = new Date().getFullYear();
-const yearsOfExperience = currentYear - 2012;
+const yearsOfExperience = currentYear - initialYear;
 const translationsData = { es: esDict, en: enDict, pt: ptDict };
 ---
 
@@ -335,7 +336,9 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 					<span class="stat-label" data-i18n="stats.experience.label"
 						>EXPERIENCIA</span
 					>
-					<span class="stat-number cyan-blue-gradient">{yearsOfExperience}+</span>
+					<span class="stat-number cyan-blue-gradient"
+						>{yearsOfExperience}+</span
+					>
 					<span class="stat-desc" data-i18n="stats.experience.desc"
 						>Años liderando el mercado</span
 					>
@@ -705,7 +708,10 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 								/>
 								<h4>{client.name}</h4>
 							</div>
-							<p class="client-desc" data-i18n={`${client.i18nKey}.desc`}>
+							<p
+								class="client-desc"
+								data-i18n={`${client.i18nKey}.desc`}
+							>
 								{client.defaultDesc}
 							</p>
 							<span class="client-tech">{client.tech}</span>
@@ -792,7 +798,8 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 				<p>
 					&copy; {new Date().getFullYear()} Kplian. <span
 						data-i18n="footer.rights"
-						>Todos los derechos reservados. Cochabamba, Bolivia.</span>
+						>Todos los derechos reservados. Cochabamba, Bolivia.</span
+					>
 				</p>
 				<div class="footer-meta-links">
 					<a href="#" data-i18n="footer.privacy">Privacidad</a>
@@ -804,7 +811,11 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 	</footer>
 </Layout>
 
-<script id="translations-data" type="application/json" set:html={JSON.stringify(translationsData)}></script>
+<script
+	id="translations-data"
+	type="application/json"
+	set:html={JSON.stringify(translationsData)}
+/>
 
 <script>
 	// Dynamic header blur on scroll
@@ -889,7 +900,7 @@ const translationsData = { es: esDict, en: enDict, pt: ptDict };
 
 	// Multi-Language Translation Dictionaries (ES, EN, PT) loaded from separate files
 	const translations = JSON.parse(
-		document.getElementById("translations-data").textContent
+		document.getElementById("translations-data").textContent,
 	);
 
 	// Language management

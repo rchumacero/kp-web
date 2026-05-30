@@ -610,12 +610,18 @@
 
 /* Services section layout */
 .services-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
 	gap: 2rem;
+	padding-bottom: 1.5rem;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
 }
 
 .service-card {
+	flex: 0 0 350px;
+	scroll-snap-align: start;
 	padding: 3rem 2.5rem;
 }
 
@@ -739,12 +745,18 @@
 }
 
 .modules-subgrid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
 	gap: 1.5rem;
+	padding-bottom: 1.5rem;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
 }
 
 .module-card {
+	flex: 0 0 320px;
+	scroll-snap-align: start;
 	padding: 2.25rem;
 }
 
@@ -855,12 +867,18 @@
 
 /* Customers showcase grid */
 .customers-grid {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
 	gap: 2rem;
+	padding-bottom: 1.5rem;
+	scroll-snap-type: x mandatory;
+	-webkit-overflow-scrolling: touch;
 }
 
 .client-card {
+	flex: 0 0 380px;
+	scroll-snap-align: start;
 	padding: 2.5rem;
 	display: flex;
 	flex-direction: column;
@@ -1050,4 +1068,29 @@
 		gap: 1.5rem;
 		text-align: center;
 	}
+}
+
+/* Custom Scrollbars for Horizontally Scrolling Grids */
+.services-grid::-webkit-scrollbar,
+.modules-subgrid::-webkit-scrollbar,
+.customers-grid::-webkit-scrollbar {
+	height: 6px;
+}
+
+.services-grid::-webkit-scrollbar-track,
+.modules-subgrid::-webkit-scrollbar-track,
+.customers-grid::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.03);
+	border-radius: 10px;
+}
+
+.services-grid::-webkit-scrollbar-thumb,
+.modules-subgrid::-webkit-scrollbar-thumb,
+.customers-grid::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		90deg,
+		var(--color-accent-blue),
+		var(--color-accent)
+	);
+	border-radius: 10px;
 }
