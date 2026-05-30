@@ -1,2148 +1,2884 @@
 ---
 // src/pages/index.astro
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout 
-  title="Kplian | Soluciones Tecnológicas & Enterprise Software Architecture"
-  description="Kplian brinda servicios de consultoría informática de alto nivel, desarrollo de ERP modular, arquitectura de software escalable y soluciones open-source."
+<Layout
+	title="Kplian | Soluciones Tecnológicas & Enterprise Software Architecture"
+	description="Kplian brinda servicios de consultoría informática de alto nivel, desarrollo de ERP modular, arquitectura de software escalable y soluciones open-source."
 >
-  <!-- Navigation bar (Nvidia Style) -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo-link">
-        <img src="/logo-kplian.png" alt="Kplian Logo" class="logo-img" />
-      </a>
+	<!-- Navigation bar (Nvidia Style) -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="#" class="logo-link">
+				<img
+					src="/logo-kplian.png"
+					alt="Kplian Logo"
+					class="logo-img"
+				/>
+			</a>
 
-      <!-- Desktop Links -->
-      <div class="nav-links">
-        <a href="#about" class="nav-item" data-i18n="nav.about">Acerca de</a>
-        <a href="#services" class="nav-item" data-i18n="nav.services">Servicios</a>
-        <a href="#products" class="nav-item" data-i18n="nav.products">Productos</a>
-        <a href="#philosophy" class="nav-item" data-i18n="nav.philosophy">Filosofía</a>
-        <a href="#customers" class="nav-item" data-i18n="nav.customers">Clientes</a>
-        
-        <!-- Language Selector Dropdown -->
-        <div class="lang-selector" id="lang-selector">
-          <button class="lang-btn" id="lang-btn" aria-haspopup="true" aria-expanded="false">
-            <svg class="w-4 h-4 globe-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
-            </svg>
-            <span id="current-lang-label">ES</span>
-            <svg class="w-3 h-3 arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          <div class="lang-dropdown" id="lang-dropdown">
-            <button class="lang-option active" data-lang="es">Español (ES)</button>
-            <button class="lang-option" data-lang="en">English (EN)</button>
-            <button class="lang-option" data-lang="pt">Português (PT)</button>
-          </div>
-        </div>
+			<!-- Desktop Links -->
+			<div class="nav-links">
+				<a href="#about" class="nav-item" data-i18n="nav.about"
+					>Acerca de</a
+				>
+				<a href="#services" class="nav-item" data-i18n="nav.services"
+					>Servicios</a
+				>
+				<a href="#products" class="nav-item" data-i18n="nav.products"
+					>Productos</a
+				>
+				<a
+					href="#philosophy"
+					class="nav-item"
+					data-i18n="nav.philosophy">Filosofía</a
+				>
+				<a href="#customers" class="nav-item" data-i18n="nav.customers"
+					>Clientes</a
+				>
 
-        <a href="#contacto" class="btn-nav" data-i18n="nav.contact">Contacto</a>
-      </div>
+				<!-- Language Selector Dropdown -->
+				<div class="lang-selector" id="lang-selector">
+					<button
+						class="lang-btn"
+						id="lang-btn"
+						aria-haspopup="true"
+						aria-expanded="false"
+					>
+						<svg
+							class="w-4 h-4 globe-icon"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+							></path>
+						</svg>
+						<span id="current-lang-label">ES</span>
+						<svg
+							class="w-3 h-3 arrow-icon"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2.5"
+								d="M19 9l-7 7-7-7"></path>
+						</svg>
+					</button>
+					<div class="lang-dropdown" id="lang-dropdown">
+						<button class="lang-option active" data-lang="es"
+							>Español (ES)</button
+						>
+						<button class="lang-option" data-lang="en"
+							>English (EN)</button
+						>
+						<button class="lang-option" data-lang="pt"
+							>Português (PT)</button
+						>
+					</div>
+				</div>
 
-      <!-- Mobile toggle -->
-      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
+				<a href="#contacto" class="btn-nav" data-i18n="nav.contact"
+					>Contacto</a
+				>
+			</div>
 
-    <!-- Mobile Drawer Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="#about" class="mobile-nav-item" data-i18n="nav.about">Acerca de</a>
-      <a href="#services" class="mobile-nav-item" data-i18n="nav.services">Servicios</a>
-      <a href="#products" class="mobile-nav-item" data-i18n="nav.products">Productos</a>
-      <a href="#philosophy" class="mobile-nav-item" data-i18n="nav.philosophy">Filosofía</a>
-      <a href="#customers" class="mobile-nav-item" data-i18n="nav.customers">Clientes</a>
-      
-      <!-- Mobile Language Row -->
-      <div class="mobile-lang-row">
-        <button class="mobile-lang-btn active" data-lang="es">ES</button>
-        <button class="mobile-lang-btn" data-lang="en">EN</button>
-        <button class="mobile-lang-btn" data-lang="pt">PT</button>
-      </div>
+			<!-- Mobile toggle -->
+			<button
+				class="mobile-toggle"
+				id="mobile-toggle"
+				aria-label="Toggle Menu"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
 
-      <a href="#contacto" class="mobile-nav-item mobile-btn" data-i18n="nav.contact">Contacto</a>
-    </div>
-  </nav>
+		<!-- Mobile Drawer Menu -->
+		<div class="mobile-menu" id="mobile-menu">
+			<a href="#about" class="mobile-nav-item" data-i18n="nav.about"
+				>Acerca de</a
+			>
+			<a href="#services" class="mobile-nav-item" data-i18n="nav.services"
+				>Servicios</a
+			>
+			<a href="#products" class="mobile-nav-item" data-i18n="nav.products"
+				>Productos</a
+			>
+			<a
+				href="#philosophy"
+				class="mobile-nav-item"
+				data-i18n="nav.philosophy">Filosofía</a
+			>
+			<a
+				href="#customers"
+				class="mobile-nav-item"
+				data-i18n="nav.customers">Clientes</a
+			>
 
-  <!-- Cinematic Hero Slider (Nvidia Style) -->
-  <header class="hero-slider-section">
-    <div class="slider-container">
-      <!-- Slide 1 (PXP & Software Architecture) -->
-      <div class="hero-slide active" id="slide-1" style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.45) 0%, rgba(3, 7, 18, 0.85) 100%), url('/slide-dev.png');">
-        <div class="container hero-slide-content">
-          <div class="badge">
-            <span class="badge-dot"></span>
-            <span class="badge-txt" data-i18n="hero.slide1.badge">PXP FRAMEWORK & AGILE ENGINEERING</span>
-          </div>
-          <h1 class="hero-title">
-            <span data-i18n="hero.slide1.title1">Arquitectura de Software</span> <span class="gradient-text font-bold" data-i18n="hero.slide1.title2">Empresarial</span>
-          </h1>
-          <p class="hero-subtitle" data-i18n="hero.slide1.subtitle">
-            Construimos plataformas críticas de alta disponibilidad y desacoplamos monolitos hacia microservicios robustos utilizando nuestro propio framework modular Open Source.
-          </p>
-          <div class="hero-actions">
-            <a href="#products" class="btn-primary">
-              <span data-i18n="hero.slide1.cta1">Módulos ERP</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-            </a>
-            <a href="#services" class="btn-secondary" data-i18n="hero.slide1.cta2">Nuestros Servicios</a>
-          </div>
-        </div>
-      </div>
+			<!-- Mobile Language Row -->
+			<div class="mobile-lang-row">
+				<button class="mobile-lang-btn active" data-lang="es">ES</button
+				>
+				<button class="mobile-lang-btn" data-lang="en">EN</button>
+				<button class="mobile-lang-btn" data-lang="pt">PT</button>
+			</div>
 
-      <!-- Slide 2 (AI & Cloud Data Pipelines) -->
-      <div class="hero-slide" id="slide-2" style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.45) 0%, rgba(3, 7, 18, 0.85) 100%), url('/slide-ai.png');">
-        <div class="container hero-slide-content">
-          <div class="badge">
-            <span class="badge-dot"></span>
-            <span class="badge-txt" data-i18n="hero.slide2.badge">A.I. COGNITION & AUTOMATION PIPELINES</span>
-          </div>
-          <h1 class="hero-title">
-            <span data-i18n="hero.slide2.title1">Inteligencia Artificial y</span> <span class="cyan-blue-gradient font-bold" data-i18n="hero.slide2.title2">Flujos de Datos</span>
-          </h1>
-          <p class="hero-subtitle" data-i18n="hero.slide2.subtitle">
-            Automatizamos la toma de decisiones críticas corporativas mediante algoritmos predictivos, análisis de riesgos y procesamiento inteligente de información empresarial.
-          </p>
-          <div class="hero-actions">
-            <a href="#services" class="btn-primary">
-              <span data-i18n="hero.slide2.cta1">Inteligencia de Negocios</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-            </a>
-            <a href="#customers" class="btn-secondary" data-i18n="hero.slide2.cta2">Casos de Éxito</a>
-          </div>
-        </div>
-      </div>
-    </div>
+			<a
+				href="#contacto"
+				class="mobile-nav-item mobile-btn"
+				data-i18n="nav.contact">Contacto</a
+			>
+		</div>
+	</nav>
 
-    <!-- Slider controls -->
-    <button class="slider-arrow prev-arrow" id="prev-arrow" aria-label="Previous Slide">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path></svg>
-    </button>
-    <button class="slider-arrow next-arrow" id="next-arrow" aria-label="Next Slide">
-      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path></svg>
-    </button>
+	<!-- Cinematic Hero Slider (Nvidia Style) -->
+	<header class="hero-slider-section">
+		<div class="slider-container">
+			<!-- Slide 1 (PXP & Software Architecture) -->
+			<div
+				class="hero-slide active"
+				id="slide-1"
+				style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.45) 0%, rgba(3, 7, 18, 0.85) 100%), url('/slide-dev.png');"
+			>
+				<div class="container hero-slide-content">
+					<div class="badge">
+						<span class="badge-dot"></span>
+						<span class="badge-txt" data-i18n="hero.slide1.badge"
+							>PXP FRAMEWORK & AGILE ENGINEERING</span
+						>
+					</div>
+					<h1 class="hero-title">
+						<span data-i18n="hero.slide1.title1"
+							>Arquitectura de Software</span
+						>
+						<span
+							class="gradient-text font-bold"
+							data-i18n="hero.slide1.title2">Empresarial</span
+						>
+					</h1>
+					<p class="hero-subtitle" data-i18n="hero.slide1.subtitle">
+						Construimos plataformas críticas de alta disponibilidad
+						y desacoplamos monolitos hacia microservicios robustos
+						utilizando nuestro propio framework modular Open Source.
+					</p>
+					<div class="hero-actions">
+						<a href="#products" class="btn-primary">
+							<span data-i18n="hero.slide1.cta1">Módulos ERP</span
+							>
+							<svg
+								class="w-4 h-4"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2.5"
+									d="M9 5l7 7-7 7"></path></svg
+							>
+						</a>
+						<a
+							href="#services"
+							class="btn-secondary"
+							data-i18n="hero.slide1.cta2">Nuestros Servicios</a
+						>
+					</div>
+				</div>
+			</div>
 
-    <!-- Slide Indicators -->
-    <div class="slider-indicators">
-      <span class="indicator active" data-slide="0"></span>
-      <span class="indicator" data-slide="1"></span>
-    </div>
-  </header>
+			<!-- Slide 2 (AI & Cloud Data Pipelines) -->
+			<div
+				class="hero-slide"
+				id="slide-2"
+				style="background-image: linear-gradient(180deg, rgba(3, 7, 18, 0.45) 0%, rgba(3, 7, 18, 0.85) 100%), url('/slide-ai.png');"
+			>
+				<div class="container hero-slide-content">
+					<div class="badge">
+						<span class="badge-dot"></span>
+						<span class="badge-txt" data-i18n="hero.slide2.badge"
+							>A.I. COGNITION & AUTOMATION PIPELINES</span
+						>
+					</div>
+					<h1 class="hero-title">
+						<span data-i18n="hero.slide2.title1"
+							>Inteligencia Artificial y</span
+						>
+						<span
+							class="cyan-blue-gradient font-bold"
+							data-i18n="hero.slide2.title2">Flujos de Datos</span
+						>
+					</h1>
+					<p class="hero-subtitle" data-i18n="hero.slide2.subtitle">
+						Automatizamos la toma de decisiones críticas
+						corporativas mediante algoritmos predictivos, análisis
+						de riesgos y procesamiento inteligente de información
+						empresarial.
+					</p>
+					<div class="hero-actions">
+						<a href="#services" class="btn-primary">
+							<span data-i18n="hero.slide2.cta1"
+								>Inteligencia de Negocios</span
+							>
+							<svg
+								class="w-4 h-4"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2.5"
+									d="M9 5l7 7-7 7"></path></svg
+							>
+						</a>
+						<a
+							href="#customers"
+							class="btn-secondary"
+							data-i18n="hero.slide2.cta2">Casos de Éxito</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  <!-- Metrics / Stats Section (Nvidia Specs Style) -->
-  <section class="stats-section">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.commits.label">CÓDIGO FUENTE</span>
-          <span class="stat-number cyan-blue-gradient">8,858+</span>
-          <span class="stat-desc" data-i18n="stats.commits.desc">Commits activos en plataformas</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.engineers.label">INGENIERÍA</span>
-          <span class="stat-number cyan-blue-gradient">25+</span>
-          <span class="stat-desc" data-i18n="stats.engineers.desc">Colaboradores especializados</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.experience.label">EXPERIENCIA</span>
-          <span class="stat-number cyan-blue-gradient">11+</span>
-          <span class="stat-desc" data-i18n="stats.experience.desc">Años liderando el mercado</span>
-        </div>
-        <div class="stat-card">
-          <span class="stat-label" data-i18n="stats.coffee.label">ENERGÍA</span>
-          <span class="stat-number cyan-blue-gradient">5,000+</span>
-          <span class="stat-desc" data-i18n="stats.coffee.desc">Tazas de café consumidas</span>
-        </div>
-      </div>
-    </div>
-  </section>
+		<!-- Slider controls -->
+		<button
+			class="slider-arrow prev-arrow"
+			id="prev-arrow"
+			aria-label="Previous Slide"
+		>
+			<svg
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+				><path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2.5"
+					d="M15 19l-7-7 7-7"></path></svg
+			>
+		</button>
+		<button
+			class="slider-arrow next-arrow"
+			id="next-arrow"
+			aria-label="Next Slide"
+		>
+			<svg
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+				xmlns="http://www.w3.org/2000/svg"
+				><path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2.5"
+					d="M9 5l7 7-7 7"></path></svg
+			>
+		</button>
 
-  <!-- About Section -->
-  <section id="about" class="about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-info">
-          <span class="section-tag" data-i18n="about.tag">Sobre Nosotros</span>
-          <h2 class="section-title" data-i18n="about.title">Soluciones informáticas de alto rendimiento</h2>
-          <p class="section-subtitle" data-i18n="about.subtitle">
-            Kplian brinda servicios de consultoría especializada para establecer los pilares tecnológicos que sustentan el crecimiento de nuestros clientes y el progreso tecnológico corporativo.
-          </p>
-          
-          <div class="about-bullets">
-            <div class="bullet-item">
-              <div class="bullet-icon">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <div class="bullet-text">
-                <h3 data-i18n="about.bullet1.title">Especialización en Open Source</h3>
-                <p data-i18n="about.bullet1.desc">Ofrecemos productos de la más alta calidad optimizando costos al evitar licencias propietarias restrictivas y gastos ocultos.</p>
-              </div>
-            </div>
-            <div class="bullet-item">
-              <div class="bullet-icon">
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"></path>
-                </svg>
-              </div>
-              <div class="bullet-text">
-                <h3 data-i18n="about.bullet2.title">Tecnología de Vanguardia</h3>
-                <p data-i18n="about.bullet2.desc">Desarrollamos soluciones personalizadas utilizando metodologías y lenguajes avanzados adaptados a tu negocio.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+		<!-- Slide Indicators -->
+		<div class="slider-indicators">
+			<span class="indicator active" data-slide="0"></span>
+			<span class="indicator" data-slide="1"></span>
+		</div>
+	</header>
 
-        <div class="about-skills">
-          <div class="skills-card glass-card">
-            <h3 class="skills-title" data-i18n="about.skills.title">Capacidades Técnicas</h3>
-            
-            <div class="skill-bar-wrap">
-              <div class="skill-info">
-                <span data-i18n="about.skills.skill1">Desarrollo de Software</span>
-                <span>93%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 93%;"></div>
-              </div>
-            </div>
+	<!-- Metrics / Stats Section (Nvidia Specs Style) -->
+	<section class="stats-section">
+		<div class="container">
+			<div class="stats-grid">
+				<div class="stat-card">
+					<span class="stat-label" data-i18n="stats.commits.label"
+						>CÓDIGO FUENTE</span
+					>
+					<span class="stat-number cyan-blue-gradient">8,858+</span>
+					<span class="stat-desc" data-i18n="stats.commits.desc"
+						>Commits activos en plataformas</span
+					>
+				</div>
+				<div class="stat-card">
+					<span class="stat-label" data-i18n="stats.engineers.label"
+						>INGENIERÍA</span
+					>
+					<span class="stat-number cyan-blue-gradient">25+</span>
+					<span class="stat-desc" data-i18n="stats.engineers.desc"
+						>Colaboradores especializados</span
+					>
+				</div>
+				<div class="stat-card">
+					<span class="stat-label" data-i18n="stats.experience.label"
+						>EXPERIENCIA</span
+					>
+					<span class="stat-number cyan-blue-gradient">11+</span>
+					<span class="stat-desc" data-i18n="stats.experience.desc"
+						>Años liderando el mercado</span
+					>
+				</div>
+				<div class="stat-card">
+					<span class="stat-label" data-i18n="stats.coffee.label"
+						>ENERGÍA</span
+					>
+					<span class="stat-number cyan-blue-gradient">5,000+</span>
+					<span class="stat-desc" data-i18n="stats.coffee.desc"
+						>Tazas de café consumidas</span
+					>
+				</div>
+			</div>
+		</div>
+	</section>
 
-            <div class="skill-bar-wrap">
-              <div class="skill-info">
-                <span data-i18n="about.skills.skill2">Centrales Telefónicas (VoIP)</span>
-                <span>92%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 92%;"></div>
-              </div>
-            </div>
+	<!-- About Section -->
+	<section id="about" class="about-section">
+		<div class="container">
+			<div class="about-grid">
+				<div class="about-info">
+					<span class="section-tag" data-i18n="about.tag"
+						>Sobre Nosotros</span
+					>
+					<h2 class="section-title" data-i18n="about.title">
+						Soluciones informáticas de alto rendimiento
+					</h2>
+					<p class="section-subtitle" data-i18n="about.subtitle">
+						Kplian brinda servicios de consultoría especializada
+						para establecer los pilares tecnológicos que sustentan
+						el crecimiento de nuestros clientes y el progreso
+						tecnológico corporativo.
+					</p>
 
-            <div class="skill-bar-wrap">
-              <div class="skill-info">
-                <span data-i18n="about.skills.skill3">Arquitectura Cloud & Mobile</span>
-                <span>82%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 82%;"></div>
-              </div>
-            </div>
+					<div class="about-bullets">
+						<div class="bullet-item">
+							<div class="bullet-icon">
+								<svg
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+									></path>
+								</svg>
+							</div>
+							<div class="bullet-text">
+								<h3 data-i18n="about.bullet1.title">
+									Especialización en Open Source
+								</h3>
+								<p data-i18n="about.bullet1.desc">
+									Ofrecemos productos de la más alta calidad
+									optimizando costos al evitar licencias
+									propietarias restrictivas y gastos ocultos.
+								</p>
+							</div>
+						</div>
+						<div class="bullet-item">
+							<div class="bullet-icon">
+								<svg
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 9.172V5L8 4z"
+									></path>
+								</svg>
+							</div>
+							<div class="bullet-text">
+								<h3 data-i18n="about.bullet2.title">
+									Tecnología de Vanguardia
+								</h3>
+								<p data-i18n="about.bullet2.desc">
+									Desarrollamos soluciones personalizadas
+									utilizando metodologías y lenguajes
+									avanzados adaptados a tu negocio.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 
-            <div class="skill-bar-wrap">
-              <div class="skill-info">
-                <span data-i18n="about.skills.skill4">Diseño Web Premium</span>
-                <span>78%</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-progress" style="width: 78%;"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+				<div class="about-skills">
+					<div class="skills-card glass-card">
+						<h3 class="skills-title" data-i18n="about.skills.title">
+							Capacidades Técnicas
+						</h3>
 
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="section-tag" data-i18n="services.tag">Servicios Profesionales</span>
-        <h2 class="section-title" data-i18n="services.title">¿Qué es lo que hacemos?</h2>
-        <p class="section-subtitle" data-i18n="services.subtitle">Acompañamos a su organización con un portafolio completo de consultoría de TI y software personalizado.</p>
-      </div>
+						<div class="skill-bar-wrap">
+							<div class="skill-info">
+								<span data-i18n="about.skills.skill1"
+									>Desarrollo de Software</span
+								>
+								<span>94%</span>
+							</div>
+							<div class="skill-bar">
+								<div class="skill-progress" style="width: 93%;">
+								</div>
+							</div>
+						</div>
 
-      <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card glow-card">
-          <div class="service-icon-wrap">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-          </div>
-          <h3 data-i18n="services.item1.title">Enterprise Resource Planning (ERP)</h3>
-          <p data-i18n="services.item1.desc">
-            Sabemos que el software debe adaptarse a las empresas y no al revés. Contamos con amplia experiencia en el desarrollo e implantación de módulos ERP integrados para grandes corporaciones.
-          </p>
-        </div>
+						<div class="skill-bar-wrap">
+							<div class="skill-info">
+								<span data-i18n="about.skills.skill2"
+									>Centrales Telefónicas (VoIP)</span
+								>
+								<span>92%</span>
+							</div>
+							<div class="skill-bar">
+								<div class="skill-progress" style="width: 92%;">
+								</div>
+							</div>
+						</div>
 
-        <!-- Service 2 -->
-        <div class="service-card glow-card">
-          <div class="service-icon-wrap">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-          </div>
-          <h3 data-i18n="services.item2.title">Diseño y Desarrollo de Software</h3>
-          <p data-i18n="services.item2.desc">
-            Necesidades específicas exigen desarrollo a la medida. Contamos con procesos ágiles e innovadores ejecutados por un equipo de ingenieros senior enfocado en altos estándares de calidad.
-          </p>
-        </div>
+						<div class="skill-bar-wrap">
+							<div class="skill-info">
+								<span data-i18n="about.skills.skill3"
+									>Arquitectura Cloud & Mobile</span
+								>
+								<span>82%</span>
+							</div>
+							<div class="skill-bar">
+								<div class="skill-progress" style="width: 82%;">
+								</div>
+							</div>
+						</div>
 
-        <!-- Service 3 -->
-        <div class="service-card glow-card">
-          <div class="service-icon-wrap">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
-          </div>
-          <h3 data-i18n="services.item3.title">Diseño Web Responsivo</h3>
-          <p data-i18n="services.item3.desc">
-            Creamos interfaces interactivas fluidas que funcionan en computadoras y dispositivos móviles. Con código nativo limpio, garantizando velocidad y rendimiento estelar.
-          </p>
-        </div>
+						<div class="skill-bar-wrap">
+							<div class="skill-info">
+								<span data-i18n="about.skills.skill4"
+									>Diseño Web Premium</span
+								>
+								<span>78%</span>
+							</div>
+							<div class="skill-bar">
+								<div class="skill-progress" style="width: 78%;">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-        <!-- Service 4 -->
-        <div class="service-card glow-card">
-          <div class="service-icon-wrap">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-          </div>
-          <h3 data-i18n="services.item4.title">Inteligencia de Negocios (BI)</h3>
-          <p data-i18n="services.item4.desc">
-            Facilitamos la toma de decisiones precisas y rápidas. Proveemos servicios de BI bajo el principio de "información correcta de manera oportuna, transparente y clara".
-          </p>
-        </div>
+	<!-- Services Section -->
+	<section id="services" class="services-section">
+		<div class="container">
+			<div class="section-title-wrap">
+				<span class="section-tag" data-i18n="services.tag"
+					>Servicios Profesionales</span
+				>
+				<h2 class="section-title" data-i18n="services.title">
+					¿Qué es lo que hacemos?
+				</h2>
+				<p class="section-subtitle" data-i18n="services.subtitle">
+					Acompañamos a su organización con un portafolio completo de
+					consultoría de TI y software personalizado.
+				</p>
+			</div>
 
-        <!-- Service 5 -->
-        <div class="service-card glow-card">
-          <div class="service-icon-wrap">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-          </div>
-          <h3 data-i18n="services.item5.title">Seguridad de Información</h3>
-          <p data-i18n="services.item5.desc">
-            Análisis de riesgos y seguridad informática empresarial integral. Le acompañamos en la identificación de amenazas, vulnerabilidades, mitigación y despliegue seguro.
-          </p>
-        </div>
+			<div class="services-grid">
+				<!-- Service 1 -->
+				<div class="service-card glow-card">
+					<div class="service-icon-wrap">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+							></path></svg
+						>
+					</div>
+					<h3 data-i18n="services.item1.title">
+						Enterprise Resource Planning (ERP)
+					</h3>
+					<p data-i18n="services.item1.desc">
+						Sabemos que el software debe adaptarse a las empresas y
+						no al revés. Contamos con amplia experiencia en el
+						desarrollo e implantación de módulos ERP integrados para
+						grandes corporaciones.
+					</p>
+				</div>
 
-        <!-- Service 6 -->
-        <div class="service-card glow-card">
-          <div class="service-icon-wrap">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-          </div>
-          <h3 data-i18n="services.item6.title">Centrales Telefónicas VoIP</h3>
-          <p data-i18n="services.item6.desc">
-            Planificamos, provisionamos e implementamos soluciones corporativas de Comunicación Unificada y plataformas VoIP robustas adaptadas al tamaño y exigencia de su negocio.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+				<!-- Service 2 -->
+				<div class="service-card glow-card">
+					<div class="service-icon-wrap">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+							></path></svg
+						>
+					</div>
+					<h3 data-i18n="services.item2.title">
+						Diseño y Desarrollo de Software
+					</h3>
+					<p data-i18n="services.item2.desc">
+						Necesidades específicas exigen desarrollo a la medida.
+						Contamos con procesos ágiles e innovadores ejecutados
+						por un equipo de ingenieros senior enfocado en altos
+						estándares de calidad.
+					</p>
+				</div>
 
-  <!-- Products Section -->
-  <section id="products" class="products-section">
-    <div class="container">
-      <div class="section-title-wrap">
-        <span class="section-tag" data-i18n="products.tag">Ecosistema Tecnológico</span>
-        <h2 class="section-title" data-i18n="products.title">Nuestros Productos</h2>
-        <p class="section-subtitle" data-i18n="products.subtitle">Arquitectura modular de software y frameworks de desarrollo ágil creados internamente.</p>
-      </div>
+				<!-- Service 3 -->
+				<div class="service-card glow-card">
+					<div class="service-icon-wrap">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+							></path></svg
+						>
+					</div>
+					<h3 data-i18n="services.item3.title">
+						Diseño Web Responsivo
+					</h3>
+					<p data-i18n="services.item3.desc">
+						Creamos interfaces interactivas fluidas que funcionan en
+						computadoras y dispositivos móviles. Con código nativo
+						limpio, garantizando velocidad y rendimiento estelar.
+					</p>
+				</div>
 
-      <div class="products-grid">
-        <!-- Main Product: Framework PXP -->
-        <div class="product-featured-card glass-card">
-          <div class="featured-badge" data-i18n="products.featured.badge">FLAGSHIP FRAMEWORK</div>
-          <div class="featured-content">
-            <h3 data-i18n="products.featured.title">Framework PXP</h3>
-            <p class="featured-desc" data-i18n="products.featured.desc">
-              Nuestro framework open-source líder diseñado para el desarrollo rápido e integrado de aplicaciones web y plataformas corporativas críticas. Basado en arquitecturas limpias, modulares y optimizado para bases de datos relacionales como PostgreSQL.
-            </p>
-            <div class="featured-tags">
-              <span>PostgreSQL</span>
-              <span>PHP / Node</span>
-              <span>JavaScript</span>
-              <span>Modular Workflows</span>
-            </div>
-            <a href="https://github.com/kplian" target="_blank" rel="noopener noreferrer" class="btn-primary">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-              <span data-i18n="products.featured.cta">Ver en GitHub</span>
-            </a>
-          </div>
-        </div>
+				<!-- Service 4 -->
+				<div class="service-card glow-card">
+					<div class="service-icon-wrap">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+							></path></svg
+						>
+					</div>
+					<h3 data-i18n="services.item4.title">
+						Inteligencia de Negocios (BI)
+					</h3>
+					<p data-i18n="services.item4.desc">
+						Facilitamos la toma de decisiones precisas y rápidas.
+						Proveemos servicios de BI bajo el principio de
+						"información correcta de manera oportuna, transparente y
+						clara".
+					</p>
+				</div>
 
-        <!-- Grid of ERP modules -->
-        <div class="modules-subgrid">
-          <div class="module-card glass-card">
-            <h4 data-i18n="products.item1.title">Facturación Computarizada</h4>
-            <p data-i18n="products.item1.desc">Módulo de emisión fiscal robusto, homologado con la normativa local vigente.</p>
-          </div>
-          <div class="module-card glass-card">
-            <h4 data-i18n="products.item2.title">Gestión de Colas</h4>
-            <p data-i18n="products.item2.desc">Monitoreo, distribución y optimización de la atención al cliente en tiempo real.</p>
-          </div>
-          <div class="module-card glass-card">
-            <h4 data-i18n="products.item3.title">Contabilidad y Presupuestos</h4>
-            <p data-i18n="products.item3.desc">Estados financieros integrados, control presupuestario y balances en vivo.</p>
-          </div>
-          <div class="module-card glass-card">
-            <h4 data-i18n="products.item4.title">Activos Fijos y Almacenes</h4>
-            <p data-i18n="products.item4.desc">Seguimiento de valorización, depreciación y control estricto de inventarios.</p>
-          </div>
-          <div class="module-card glass-card">
-            <h4 data-i18n="products.item5.title">Planillas & Recursos Humanos</h4>
-            <p data-i18n="products.item5.desc">Cálculo exacto de salarios, planillas de aportes fiscales e historial laboral.</p>
-          </div>
-          <div class="module-card glass-card">
-            <h4 data-i18n="products.item6.title">Gestión Documental (Core)</h4>
-            <p data-i18n="products.item6.desc">Estructuración de flujos documentales, firmas digitales e histórico corporativo.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+				<!-- Service 5 -->
+				<div class="service-card glow-card">
+					<div class="service-icon-wrap">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+							></path></svg
+						>
+					</div>
+					<h3 data-i18n="services.item5.title">
+						Seguridad de Información
+					</h3>
+					<p data-i18n="services.item5.desc">
+						Análisis de riesgos y seguridad informática empresarial
+						integral. Le acompañamos en la identificación de
+						amenazas, vulnerabilidades, mitigación y despliegue
+						seguro.
+					</p>
+				</div>
 
-  <!-- Philosophy Section (Nvidia Quote Block Style) -->
-  <section id="philosophy" class="philosophy-section">
-    <div class="container">
-      <div class="philosophy-wrapper">
-        <div class="quote-icon">“</div>
-        <div class="quote-slider">
-          <div class="quote-slide active">
-            <blockquote data-i18n="philosophy.quote">
-              Escuchamos sus necesidades, las estudiamos y planteamos una solución. Desarrollamos el software a la medida de su empresa y le acompañamos plenamente en el proceso de implantación corporativo.
-            </blockquote>
-            <cite data-i18n="philosophy.author">— Filosofía Fundamental KPLIAN</cite>
-          </div>
-        </div>
-        
-        <div class="philosophy-pillars">
-          <div class="pillar-card">
-            <h3 data-i18n="philosophy.pillar1.title">Singularidad</h3>
-            <p data-i18n="philosophy.pillar1.desc">Cada empresa es única y necesita soluciones de software que respondan con precisión a su propia identidad operativa.</p>
-          </div>
-          <div class="pillar-card">
-            <h3 data-i18n="philosophy.pillar2.title">Creación de Valor</h3>
-            <p data-i18n="philosophy.pillar2.desc">Creemos que la tecnología de información debe ser el catalizador principal de la eficiencia y la rentabilidad empresarial.</p>
-          </div>
-          <div class="pillar-card">
-            <h3 data-i18n="philosophy.pillar3.title">Adaptabilidad</h3>
-            <p data-i18n="philosophy.pillar3.desc">El software es el que debe amoldarse y optimizar los procesos de la empresa, nunca a la inversa.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+				<!-- Service 6 -->
+				<div class="service-card glow-card">
+					<div class="service-icon-wrap">
+						<svg
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+							><path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+							></path></svg
+						>
+					</div>
+					<h3 data-i18n="services.item6.title">
+						Centrales Telefónicas VoIP
+					</h3>
+					<p data-i18n="services.item6.desc">
+						Planificamos, provisionamos e implementamos soluciones
+						corporativas de Comunicación Unificada y plataformas
+						VoIP robustas adaptadas al tamaño y exigencia de su
+						negocio.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <!-- Customers Section -->
-  <section id="customers" class="customers-section">
-    <div class="container">
-      <div class="section-title-wrap text-center">
-        <span class="section-tag" data-i18n="customers.tag">Garantía Corporativa</span>
-        <h2 class="section-title" data-i18n="customers.title">Clientes de Confianza</h2>
-        <p class="section-subtitle mx-auto" data-i18n="customers.subtitle">Sistemas críticos de información implantados con éxito en importantes corporaciones del país.</p>
-      </div>
+	<!-- Products Section -->
+	<section id="products" class="products-section">
+		<div class="container">
+			<div class="section-title-wrap">
+				<span class="section-tag" data-i18n="products.tag"
+					>Ecosistema Tecnológico</span
+				>
+				<h2 class="section-title" data-i18n="products.title">
+					Nuestros Productos
+				</h2>
+				<p class="section-subtitle" data-i18n="products.subtitle">
+					Arquitectura modular de software y frameworks de desarrollo
+					ágil creados internamente.
+				</p>
+			</div>
 
-      <div class="customers-grid">
-        <!-- Client 1 -->
-        <div class="client-card glass-card">
-          <div class="client-header">
-            <img src="/clientes/boa.jpg" alt="BOA Logo" class="client-logo-img" />
-            <h4>Boliviana de Aviación</h4>
-          </div>
-          <p class="client-desc" data-i18n="customers.client1.desc">
-            Desarrollo e Implementación del ERP-BOA con los módulos de Contabilidad, Presupuestos, Almacenes, Recursos Humanos, Activos Fijos y Tesorería.
-          </p>
-          <span class="client-tech">PXP Framework • PostgreSQL • JavaScript</span>
-        </div>
+			<div class="products-grid">
+				<!-- Main Product: Framework PXP -->
+				<div class="product-featured-card glass-card">
+					<div
+						class="featured-badge"
+						data-i18n="products.featured.badge"
+					>
+						FLAGSHIP FRAMEWORK
+					</div>
+					<div class="featured-content">
+						<h3 data-i18n="products.featured.title">
+							Framework PXP
+						</h3>
+						<p
+							class="featured-desc"
+							data-i18n="products.featured.desc"
+						>
+							Nuestro framework open-source líder diseñado para el
+							desarrollo rápido e integrado de aplicaciones web y
+							plataformas corporativas críticas. Basado en
+							arquitecturas limpias, modulares y optimizado para
+							bases de datos relacionales como PostgreSQL.
+						</p>
+						<div class="featured-tags">
+							<span>PostgreSQL</span>
+							<span>PHP / Node</span>
+							<span>JavaScript</span>
+							<span>Modular Workflows</span>
+						</div>
+						<a
+							href="https://github.com/kplian"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="btn-primary"
+						>
+							<svg
+								class="w-5 h-5"
+								fill="currentColor"
+								viewBox="0 0 24 24"
+								xmlns="http://www.w3.org/2000/svg"
+								><path
+									d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+								></path></svg
+							>
+							<span data-i18n="products.featured.cta"
+								>Ver en GitHub</span
+							>
+						</a>
+					</div>
+				</div>
 
-        <!-- Client 2 -->
-        <div class="client-card glass-card">
-          <div class="client-header">
-            <img src="/clientes/comibol.png" alt="COMIBOL Logo" class="client-logo-img" />
-            <h4>Corporación Minera de Bolivia</h4>
-          </div>
-          <p class="client-desc" data-i18n="customers.client2.desc">
-            Implementación y adecuación de módulos de Almacenes, Recursos Humanos y Activos Fijos del ERP centralizado junto a facturación a medida.
-          </p>
-          <span class="client-tech">PXP Framework • PostgreSQL • JavaScript</span>
-        </div>
+				<!-- Grid of ERP modules -->
+				<div class="modules-subgrid">
+					<div class="module-card glass-card">
+						<h4 data-i18n="products.item1.title">
+							Facturación Computarizada
+						</h4>
+						<p data-i18n="products.item1.desc">
+							Módulo de emisión fiscal robusto, homologado con la
+							normativa local vigente.
+						</p>
+					</div>
+					<div class="module-card glass-card">
+						<h4 data-i18n="products.item2.title">
+							Gestión de Colas
+						</h4>
+						<p data-i18n="products.item2.desc">
+							Monitoreo, distribución y optimización de la
+							atención al cliente en tiempo real.
+						</p>
+					</div>
+					<div class="module-card glass-card">
+						<h4 data-i18n="products.item3.title">
+							Contabilidad y Presupuestos
+						</h4>
+						<p data-i18n="products.item3.desc">
+							Estados financieros integrados, control
+							presupuestario y balances en vivo.
+						</p>
+					</div>
+					<div class="module-card glass-card">
+						<h4 data-i18n="products.item4.title">
+							Activos Fijos y Almacenes
+						</h4>
+						<p data-i18n="products.item4.desc">
+							Seguimiento de valorización, depreciación y control
+							estricto de inventarios.
+						</p>
+					</div>
+					<div class="module-card glass-card">
+						<h4 data-i18n="products.item5.title">
+							Planillas & Recursos Humanos
+						</h4>
+						<p data-i18n="products.item5.desc">
+							Cálculo exacto de salarios, planillas de aportes
+							fiscales e historial laboral.
+						</p>
+					</div>
+					<div class="module-card glass-card">
+						<h4 data-i18n="products.item6.title">
+							Gestión Documental (Core)
+						</h4>
+						<p data-i18n="products.item6.desc">
+							Estructuración de flujos documentales, firmas
+							digitales e histórico corporativo.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-        <!-- Client 3 -->
-        <div class="client-card glass-card">
-          <div class="client-header">
-            <img src="/clientes/logistica.jpg" alt="YPFB Logística Logo" class="client-logo-img" />
-            <h4>YPFB Logística S.A.</h4>
-          </div>
-          <p class="client-desc" data-i18n="customers.client3.desc">
-            Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos.
-          </p>
-          <span class="client-tech">PXP Framework • PostgreSQL • PHP</span>
-        </div>
+	<!-- Philosophy Section (Nvidia Quote Block Style) -->
+	<section id="philosophy" class="philosophy-section">
+		<div class="container">
+			<div class="philosophy-wrapper">
+				<div class="quote-icon">“</div>
+				<div class="quote-slider">
+					<div class="quote-slide active">
+						<blockquote data-i18n="philosophy.quote">
+							Escuchamos sus necesidades, las estudiamos y
+							planteamos una solución. Desarrollamos el software a
+							la medida de su empresa y le acompañamos plenamente
+							en el proceso de implantación corporativo.
+						</blockquote>
+						<cite data-i18n="philosophy.author"
+							>— Filosofía Fundamental KPLIAN</cite
+						>
+					</div>
+				</div>
 
-        <!-- Client 4 -->
-        <div class="client-card glass-card">
-          <div class="client-header">
-            <img src="/clientes/etr.png" alt="ENDE Transmisión Logo" class="client-logo-img" />
-            <h4>ENDE Transmisión</h4>
-          </div>
-          <p class="client-desc" data-i18n="customers.client4.desc">
-            Implementación completa del Sistema Administrativo Financiero ERP-BOA para el control de operaciones de la red eléctrica nacional.
-          </p>
-          <span class="client-tech">PXP Framework • PostgreSQL • PHP</span>
-        </div>
+				<div class="philosophy-pillars">
+					<div class="pillar-card">
+						<h3 data-i18n="philosophy.pillar1.title">
+							Singularidad
+						</h3>
+						<p data-i18n="philosophy.pillar1.desc">
+							Cada empresa es única y necesita soluciones de
+							software que respondan con precisión a su propia
+							identidad operativa.
+						</p>
+					</div>
+					<div class="pillar-card">
+						<h3 data-i18n="philosophy.pillar2.title">
+							Creación de Valor
+						</h3>
+						<p data-i18n="philosophy.pillar2.desc">
+							Creemos que la tecnología de información debe ser el
+							catalizador principal de la eficiencia y la
+							rentabilidad empresarial.
+						</p>
+					</div>
+					<div class="pillar-card">
+						<h3 data-i18n="philosophy.pillar3.title">
+							Adaptabilidad
+						</h3>
+						<p data-i18n="philosophy.pillar3.desc">
+							El software es el que debe amoldarse y optimizar los
+							procesos de la empresa, nunca a la inversa.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-        <!-- Client 5 -->
-        <div class="client-card glass-card">
-          <div class="client-header">
-            <img src="/clientes/ofep.jpg" alt="OFEP Logo" class="client-logo-img" />
-            <h4>OFEP</h4>
-          </div>
-          <p class="client-desc" data-i18n="customers.client5.desc">
-            Servicio de formación técnica y consultoría avanzada en módulos integrales del ERP PXP (Seguridad, Flujos de Trabajo, Compras).
-          </p>
-          <span class="client-tech">PXP Framework • HTML5 • jQuery</span>
-        </div>
+	<!-- Customers Section -->
+	<section id="customers" class="customers-section">
+		<div class="container">
+			<div class="section-title-wrap text-center">
+				<span class="section-tag" data-i18n="customers.tag"
+					>Garantía Corporativa</span
+				>
+				<h2 class="section-title" data-i18n="customers.title">
+					Clientes de Confianza
+				</h2>
+				<p
+					class="section-subtitle mx-auto"
+					data-i18n="customers.subtitle"
+				>
+					Sistemas críticos de información implantados con éxito en
+					importantes corporaciones del país.
+				</p>
+			</div>
 
-        <!-- Client 6 -->
-        <div class="client-card glass-card">
-          <div class="client-header">
-            <img src="/clientes/logo-diamond-resorts-1.jpg" alt="Diamond Resorts Logo" class="client-logo-img" />
-            <h4>Diamond Resorts</h4>
-          </div>
-          <p class="client-desc" data-i18n="customers.client6.desc">
-            Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales.
-          </p>
-          <span class="client-tech">Python • JavaScript • Oracle PL/SQL</span>
-        </div>
-      </div>
-    </div>
-  </section>
+			<div class="customers-grid">
+				<!-- Client 1 -->
+				<div class="client-card glass-card">
+					<div class="client-header">
+						<img
+							src="/clientes/boa.jpg"
+							alt="BOA Logo"
+							class="client-logo-img"
+						/>
+						<h4>Boliviana de Aviación</h4>
+					</div>
+					<p class="client-desc" data-i18n="customers.client1.desc">
+						Desarrollo e Implementación del ERP-BOA con los módulos
+						de Contabilidad, Presupuestos, Almacenes, Recursos
+						Humanos, Activos Fijos y Tesorería.
+					</p>
+					<span class="client-tech"
+						>PXP Framework • PostgreSQL • JavaScript</span
+					>
+				</div>
 
-  <!-- Contact & Footer Section -->
-  <footer class="main-footer" id="contacto">
-    <div class="container footer-content">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#" class="logo-link">
-            <img src="/logo-kplian.png" alt="Kplian Logo" class="logo-img" />
-          </a>
-          <p data-i18n="footer.brand">
-            Pilares tecnológicos de alto nivel para el desarrollo de soluciones de software escalables y corporativas.
-          </p>
-          <div class="contact-details">
-            <p><strong>Cochabamba, Bolivia</strong></p>
-            <p>Email: info@kplian.com</p>
-          </div>
-        </div>
+				<!-- Client 2 -->
+				<div class="client-card glass-card">
+					<div class="client-header">
+						<img
+							src="/clientes/comibol.png"
+							alt="COMIBOL Logo"
+							class="client-logo-img"
+						/>
+						<h4>Corporación Minera de Bolivia</h4>
+					</div>
+					<p class="client-desc" data-i18n="customers.client2.desc">
+						Implementación y adecuación de módulos de Almacenes,
+						Recursos Humanos y Activos Fijos del ERP centralizado
+						junto a facturación a medida.
+					</p>
+					<span class="client-tech"
+						>PXP Framework • PostgreSQL • JavaScript</span
+					>
+				</div>
 
-        <div class="footer-cols">
-          <div class="footer-col">
-            <h4 data-i18n="footer.col1.title">Soluciones</h4>
-            <a href="#services">Enterprise ERP</a>
-            <a href="#services" data-i18n="services.item2.title">Desarrollo a Medida</a>
-            <a href="#services" data-i18n="services.item4.title">Inteligencia de Negocios</a>
-            <a href="#services" data-i18n="services.item5.title">Seguridad de TI</a>
-          </div>
+				<!-- Client 3 -->
+				<div class="client-card glass-card">
+					<div class="client-header">
+						<img
+							src="/clientes/logistica.jpg"
+							alt="YPFB Logística Logo"
+							class="client-logo-img"
+						/>
+						<h4>YPFB Logística S.A.</h4>
+					</div>
+					<p class="client-desc" data-i18n="customers.client3.desc">
+						Diseño e implementación especializada del sistema de
+						control y Mantenimiento Industrial crítico para la
+						cadena logística de hidrocarburos.
+					</p>
+					<span class="client-tech"
+						>PXP Framework • PostgreSQL • PHP</span
+					>
+				</div>
 
-          <div class="footer-col">
-            <h4 data-i18n="footer.col2.title">Ecosistema</h4>
-            <a href="#products">Framework PXP</a>
-            <a href="https://github.com/kplian" target="_blank" rel="noopener noreferrer" data-i18n="footer.col2.item2">Código Open Source</a>
-            <a href="#products" data-i18n="footer.col2.item3">Módulos ERP</a>
-            <a href="#about" data-i18n="footer.col2.item4">Servicios en la Nube</a>
-          </div>
+				<!-- Client 4 -->
+				<div class="client-card glass-card">
+					<div class="client-header">
+						<img
+							src="/clientes/etr.png"
+							alt="ENDE Transmisión Logo"
+							class="client-logo-img"
+						/>
+						<h4>ENDE Transmisión</h4>
+					</div>
+					<p class="client-desc" data-i18n="customers.client4.desc">
+						Implementación completa del Sistema Administrativo
+						Financiero ERP-BOA para el control de operaciones de la
+						red eléctrica nacional.
+					</p>
+					<span class="client-tech"
+						>PXP Framework • PostgreSQL • PHP</span
+					>
+				</div>
 
-          <div class="footer-col">
-            <h4 data-i18n="footer.col3.title">Corporativo</h4>
-            <a href="#about" data-i18n="nav.about">Nosotros</a>
-            <a href="#philosophy" data-i18n="footer.col3.item2">Filosofía de Trabajo</a>
-            <a href="#customers" data-i18n="footer.col3.item3">Clientes de Confianza</a>
-            <a href="#contacto" data-i18n="nav.contact">Contacto Directo</a>
-          </div>
-        </div>
-      </div>
+				<!-- Client 5 -->
+				<div class="client-card glass-card">
+					<div class="client-header">
+						<img
+							src="/clientes/ofep.jpg"
+							alt="OFEP Logo"
+							class="client-logo-img"
+						/>
+						<h4>OFEP</h4>
+					</div>
+					<p class="client-desc" data-i18n="customers.client5.desc">
+						Servicio de formación técnica y consultoría avanzada en
+						módulos integrales del ERP PXP (Seguridad, Flujos de
+						Trabajo, Compras).
+					</p>
+					<span class="client-tech"
+						>PXP Framework • HTML5 • jQuery</span
+					>
+				</div>
 
-      <hr class="footer-divider" />
+				<!-- Client 6 -->
+				<div class="client-card glass-card">
+					<div class="client-header">
+						<img
+							src="/clientes/logo-diamond-resorts-1.jpg"
+							alt="Diamond Resorts Logo"
+							class="client-logo-img"
+						/>
+						<h4>Diamond Resorts</h4>
+					</div>
+					<p class="client-desc" data-i18n="customers.client6.desc">
+						Arquitectura y desarrollo de soluciones móviles e
+						integraciones de bases de datos para sistemas hoteleros
+						internacionales.
+					</p>
+					<span class="client-tech"
+						>Python • JavaScript • Oracle PL/SQL</span
+					>
+				</div>
+			</div>
+		</div>
+	</section>
 
-      <div class="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Kplian. <span data-i18n="footer.rights">Todos los derechos reservados. Cochabamba, Bolivia.</span></p>
-        <div class="footer-meta-links">
-          <a href="#" data-i18n="footer.privacy">Privacidad</a>
-          <a href="#" data-i18n="footer.terms">Términos de Servicio</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+	<!-- Contact & Footer Section -->
+	<footer class="main-footer" id="contacto">
+		<div class="container footer-content">
+			<div class="footer-top">
+				<div class="footer-brand">
+					<a href="#" class="logo-link">
+						<img
+							src="/logo-kplian.png"
+							alt="Kplian Logo"
+							class="logo-img"
+						/>
+					</a>
+					<p data-i18n="footer.brand">
+						Pilares tecnológicos de alto nivel para el desarrollo de
+						soluciones de software escalables y corporativas.
+					</p>
+					<div class="contact-details">
+						<p><strong>Cochabamba, Bolivia</strong></p>
+						<p>Email: info@kplian.com</p>
+					</div>
+				</div>
+
+				<div class="footer-cols">
+					<div class="footer-col">
+						<h4 data-i18n="footer.col1.title">Soluciones</h4>
+						<a href="#services">Enterprise ERP</a>
+						<a href="#services" data-i18n="services.item2.title"
+							>Desarrollo a Medida</a
+						>
+						<a href="#services" data-i18n="services.item4.title"
+							>Inteligencia de Negocios</a
+						>
+						<a href="#services" data-i18n="services.item5.title"
+							>Seguridad de TI</a
+						>
+					</div>
+
+					<div class="footer-col">
+						<h4 data-i18n="footer.col2.title">Ecosistema</h4>
+						<a href="#products">Framework PXP</a>
+						<a
+							href="https://github.com/kplian"
+							target="_blank"
+							rel="noopener noreferrer"
+							data-i18n="footer.col2.item2">Código Open Source</a
+						>
+						<a href="#products" data-i18n="footer.col2.item3"
+							>Módulos ERP</a
+						>
+						<a href="#about" data-i18n="footer.col2.item4"
+							>Servicios en la Nube</a
+						>
+					</div>
+
+					<div class="footer-col">
+						<h4 data-i18n="footer.col3.title">Corporativo</h4>
+						<a href="#about" data-i18n="nav.about">Nosotros</a>
+						<a href="#philosophy" data-i18n="footer.col3.item2"
+							>Filosofía de Trabajo</a
+						>
+						<a href="#customers" data-i18n="footer.col3.item3"
+							>Clientes de Confianza</a
+						>
+						<a href="#contacto" data-i18n="nav.contact"
+							>Contacto Directo</a
+						>
+					</div>
+				</div>
+			</div>
+
+			<hr class="footer-divider" />
+
+			<div class="footer-bottom">
+				<p>
+					&copy; {new Date().getFullYear()} Kplian. <span
+						data-i18n="footer.rights"
+						>Todos los derechos reservados. Cochabamba, Bolivia.</span>
+				</p>
+				<div class="footer-meta-links">
+					<a href="#" data-i18n="footer.privacy">Privacidad</a>
+					<a href="#" data-i18n="footer.terms">Términos de Servicio</a
+					>
+				</div>
+			</div>
+		</div>
+	</footer>
 </Layout>
 
 <script>
-  // Dynamic header blur on scroll
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar?.classList.add('scrolled');
-    } else {
-      navbar?.classList.remove('scrolled');
-    }
-  });
+	// Dynamic header blur on scroll
+	const navbar = document.getElementById("navbar");
+	window.addEventListener("scroll", () => {
+		if (window.scrollY > 50) {
+			navbar?.classList.add("scrolled");
+		} else {
+			navbar?.classList.remove("scrolled");
+		}
+	});
 
-  // Mobile drawer control
-  const toggleBtn = document.getElementById('mobile-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+	// Mobile drawer control
+	const toggleBtn = document.getElementById("mobile-toggle");
+	const mobileMenu = document.getElementById("mobile-menu");
 
-  toggleBtn?.addEventListener('click', () => {
-    toggleBtn.classList.toggle('active');
-    mobileMenu?.classList.toggle('active');
-  });
+	toggleBtn?.addEventListener("click", () => {
+		toggleBtn.classList.toggle("active");
+		mobileMenu?.classList.toggle("active");
+	});
 
-  // Close mobile drawer when clicking links
-  document.querySelectorAll('.mobile-nav-item').forEach(item => {
-    item.addEventListener('click', () => {
-      toggleBtn?.classList.remove('active');
-      mobileMenu?.classList.remove('active');
-    });
-  });
+	// Close mobile drawer when clicking links
+	document.querySelectorAll(".mobile-nav-item").forEach((item) => {
+		item.addEventListener("click", () => {
+			toggleBtn?.classList.remove("active");
+			mobileMenu?.classList.remove("active");
+		});
+	});
 
-  // Cinematic Hero Slider (Nvidia Style) Logic
-  const slides = document.querySelectorAll('.hero-slide');
-  const indicators = document.querySelectorAll('.indicator');
-  const nextArrow = document.getElementById('next-arrow');
-  const prevArrow = document.getElementById('prev-arrow');
-  let currentSlide = 0;
-  let autoSlideTimer: number;
+	// Cinematic Hero Slider (Nvidia Style) Logic
+	const slides = document.querySelectorAll(".hero-slide");
+	const indicators = document.querySelectorAll(".indicator");
+	const nextArrow = document.getElementById("next-arrow");
+	const prevArrow = document.getElementById("prev-arrow");
+	let currentSlide = 0;
+	let autoSlideTimer: number;
 
-  function showSlide(index: number) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(ind => ind.classList.remove('active'));
-    
-    currentSlide = (index + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-    indicators[currentSlide].classList.add('active');
-  }
+	function showSlide(index: number) {
+		slides.forEach((slide) => slide.classList.remove("active"));
+		indicators.forEach((ind) => ind.classList.remove("active"));
 
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
+		currentSlide = (index + slides.length) % slides.length;
+		slides[currentSlide].classList.add("active");
+		indicators[currentSlide].classList.add("active");
+	}
 
-  function prevSlide() {
-    showSlide(currentSlide - 1);
-  }
+	function nextSlide() {
+		showSlide(currentSlide + 1);
+	}
 
-  nextArrow?.addEventListener('click', () => {
-    nextSlide();
-    resetAutoSlide();
-  });
+	function prevSlide() {
+		showSlide(currentSlide - 1);
+	}
 
-  prevArrow?.addEventListener('click', () => {
-    prevSlide();
-    resetAutoSlide();
-  });
+	nextArrow?.addEventListener("click", () => {
+		nextSlide();
+		resetAutoSlide();
+	});
 
-  indicators.forEach((indicator, idx) => {
-    indicator.addEventListener('click', () => {
-      showSlide(idx);
-      resetAutoSlide();
-    });
-  });
+	prevArrow?.addEventListener("click", () => {
+		prevSlide();
+		resetAutoSlide();
+	});
 
-  function startAutoSlide() {
-    autoSlideTimer = setInterval(nextSlide, 8000);
-  }
+	indicators.forEach((indicator, idx) => {
+		indicator.addEventListener("click", () => {
+			showSlide(idx);
+			resetAutoSlide();
+		});
+	});
 
-  function resetAutoSlide() {
-    clearInterval(autoSlideTimer);
-    startAutoSlide();
-  }
+	function startAutoSlide() {
+		autoSlideTimer = setInterval(nextSlide, 8000);
+	}
 
-  startAutoSlide();
+	function resetAutoSlide() {
+		clearInterval(autoSlideTimer);
+		startAutoSlide();
+	}
 
-  // Multi-Language Translation Dictionaries (ES, EN, PT)
-  const translations = {
-    es: {
-      nav: {
-        about: "Acerca de",
-        services: "Servicios",
-        products: "Productos",
-        philosophy: "Filosofía",
-        customers: "Clientes",
-        contact: "Contacto"
-      },
-      hero: {
-        slide1: {
-          badge: "PXP FRAMEWORK & INGENIERÍA ÁGIL",
-          title1: "Arquitectura de Software",
-          title2: "Empresarial",
-          subtitle: "Construimos plataformas críticas de alta disponibilidad y desacoplamos monolitos hacia microservicios robustos utilizando nuestro propio framework modular Open Source.",
-          cta1: "Módulos ERP",
-          cta2: "Nuestros Servicios"
-        },
-        slide2: {
-          badge: "A.I. COGNICIÓN & PIPELINES DE AUTOMATIZACIÓN",
-          title1: "Inteligencia Artificial y",
-          title2: "Flujos de Datos",
-          subtitle: "Automatizamos la toma de decisiones críticas corporativas mediante algoritmos predictivos, análisis de riesgos y procesamiento inteligente de información empresarial.",
-          cta1: "Inteligencia de Negocios",
-          cta2: "Casos de Éxito"
-        }
-      },
-      stats: {
-        commits: { label: "CÓDIGO FUENTE", desc: "Commits activos en plataformas" },
-        engineers: { label: "INGENIERÍA", desc: "Colaboradores especializados" },
-        experience: { label: "EXPERIENCIA", desc: "Años liderando el mercado" },
-        coffee: { label: "ENERGÍA", desc: "Tazas de café consumidas" }
-      },
-      about: {
-        tag: "Sobre Nosotros",
-        title: "Soluciones informáticas de alto rendimiento",
-        subtitle: "Kplian brinda servicios de consultoría especializada para establecer los pilares tecnológicos que sustentan el crecimiento de nuestros clientes y el progreso tecnológico corporativo.",
-        bullet1: {
-          title: "Especialización en Open Source",
-          desc: "Ofrecemos productos de la más alta calidad optimizando costos al evitar licencias propietarias restrictivas y gastos ocultos."
-        },
-        bullet2: {
-          title: "Tecnología de Vanguardia",
-          desc: "Desarrollamos soluciones personalizadas utilizando metodologías y lenguajes avanzados adaptados a tu negocio."
-        },
-        skills: {
-          title: "Capacidades Técnicas",
-          skill1: "Desarrollo de Software",
-          skill2: "Centrales Telefónicas (VoIP)",
-          skill3: "Arquitectura Cloud & Mobile",
-          skill4: "Diseño Web Premium"
-        }
-      },
-      services: {
-        tag: "Servicios Profesionales",
-        title: "¿Qué es lo que hacemos?",
-        subtitle: "Acompañamos a su organización con un portafolio completo de consultoría de TI y software personalizado.",
-        item1: {
-          title: "Enterprise Resource Planning (ERP)",
-          desc: "Sabemos que el software debe adaptarse a las empresas y no al revés. Contamos con amplia experiencia en el desarrollo e implantación de módulos ERP integrados para grandes corporaciones."
-        },
-        item2: {
-          title: "Diseño y Desarrollo de Software",
-          desc: "Necesidades específicas exigen desarrollo a la medida. Contamos con procesos ágiles e innovadores ejecutados por un equipo de ingenieros senior enfocado en altos estándares de calidad."
-        },
-        item3: {
-          title: "Diseño Web Responsivo",
-          desc: "Creamos interfaces interactivas fluidas que funcionan en computadoras y dispositivos móviles. Con código nativo limpio, garantizando velocidad y rendimiento estelar."
-        },
-        item4: {
-          title: "Inteligencia de Negocios (BI)",
-          desc: "Facilitamos la toma de decisiones precisas y rápidas. Proveemos servicios de BI bajo el principio de \"información correcta de manera oportuna, transparente y clara\"."
-        },
-        item5: {
-          title: "Seguridad de Información",
-          desc: "Análisis de riesgos y seguridad informática empresarial integral. Le acompañamos en la identificación de amenazas, vulnerabilidades, mitigación y despliegue seguro."
-        },
-        item6: {
-          title: "Centrales Telefónicas VoIP",
-          desc: "Planificamos, provisionamos e implementamos soluciones corporativas de Comunicación Unificada y plataformas VoIP robustas adaptadas al tamaño y exigencia de su negocio."
-        }
-      },
-      products: {
-        tag: "Ecosistema Tecnológico",
-        title: "Nuestros Productos",
-        subtitle: "Arquitectura modular de software y frameworks de desarrollo ágil creados internamente.",
-        featured: {
-          badge: "FLAGSHIP FRAMEWORK",
-          title: "Framework PXP",
-          desc: "Nuestro framework open-source líder diseñado para el desarrollo rápido e integrado de aplicaciones web y plataformas corporativas críticas. Basado en arquitecturas limpias, modulares y optimizado para bases de datos relacionales como PostgreSQL.",
-          cta: "Ver en GitHub"
-        },
-        item1: { title: "Facturación Computarizada", desc: "Módulo de emisión fiscal robusto, homologado con la normativa local vigente." },
-        item2: { title: "Gestión de Colas", desc: "Monitoreo, distribución y optimización de la atención al cliente en tiempo real." },
-        item3: { title: "Contabilidad y Presupuestos", desc: "Estados financieros integrados, control presupuestario y balances en vivo." },
-        item4: { title: "Activos Fijos y Almacenes", desc: "Seguimiento de valorización, depreciación y control estricto de inventarios." },
-        item5: { title: "Planillas & Recursos Humanos", desc: "Cálculo exacto de salarios, planillas de aportes fiscales e historial laboral." },
-        item6: { title: "Gestión Documental (Core)", desc: "Estructuración de flujos documentales, firmas digitales e histórico corporativo." }
-      },
-      philosophy: {
-        quote: "Escuchamos sus necesidades, las estudiamos y planteamos una solución. Desarrollamos el software a la medida de su empresa y le acompañamos plenamente en el proceso de implantación corporativo.",
-        author: "— Filosofía Fundamental KPLIAN",
-        pillar1: { title: "Singularidad", desc: "Cada empresa es única y necesita soluciones de software que respondan con precisión a su propia identidad operativa." },
-        pillar2: { title: "Creación de Valor", desc: "Creemos que la tecnología de información debe ser el catalizador principal de la eficiencia y la rentabilidad empresarial." },
-        pillar3: { title: "Adaptabilidad", desc: "El software es el que debe amoldarse y optimizar los procesos de la empresa, nunca a la inversa." }
-      },
-      customers: {
-        tag: "Garantía Corporativa",
-        title: "Clientes de Confianza",
-        subtitle: "Sistemas críticos de información implantados con éxito en importantes corporaciones del país.",
-        client1: { desc: "Desarrollo e Implementación del ERP-BOA con los módulos de Contabilidad, Presupuestos, Almacenes, Recursos Humanos, Activos Fijos y Tesorería." },
-        client2: { desc: "Implementación y adecuación de módulos de Almacenes, Recursos Humanos y Activos Fijos del ERP centralizado junto a facturación a medida." },
-        client3: { desc: "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos." },
-        client4: { desc: "Implementación completa del Sistema Administrativo Financiero ERP-BOA para el control de operaciones de la red eléctrica nacional." },
-        client5: { desc: "Servicio de formación técnica y consultoría avanzada en módulos integrales del ERP PXP (Seguridad, Flujos de Trabajo, Compras)." },
-        client6: { desc: "Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales." }
-      },
-      footer: {
-        brand: "Pilares tecnológicos de alto nivel para el desarrollo de soluciones de software escalables y corporativas.",
-        col1: { title: "Soluciones" },
-        col2: { title: "Ecosistema", item2: "Código Open Source", item3: "Módulos ERP", item4: "Servicios en la Nube" },
-        col3: { title: "Corporativo", item2: "Filosofía de Trabajo", item3: "Clientes de Confianza" },
-        rights: "Todos los derechos reservados. Cochabamba, Bolivia.",
-        privacy: "Privacidad",
-        terms: "Términos de Servicio"
-      }
-    },
-    en: {
-      nav: {
-        about: "About Us",
-        services: "Services",
-        products: "Products",
-        philosophy: "Philosophy",
-        customers: "Clients",
-        contact: "Contact"
-      },
-      hero: {
-        slide1: {
-          badge: "PXP FRAMEWORK & AGILE ENGINEERING",
-          title1: "Enterprise Software",
-          title2: "Architecture",
-          subtitle: "We build critical high-availability platforms and decouple monoliths into robust microservices using our own open-source modular framework.",
-          cta1: "ERP Modules",
-          cta2: "Our Services"
-        },
-        slide2: {
-          badge: "A.I. COGNITION & AUTOMATION PIPELINES",
-          title1: "Artificial Intelligence &",
-          title2: "Data Flows",
-          subtitle: "We automate critical corporate decision-making using predictive algorithms, risk analysis, and intelligent business information processing.",
-          cta1: "Business Intelligence",
-          cta2: "Success Cases"
-        }
-      },
-      stats: {
-        commits: { label: "SOURCE CODE", desc: "Active commits across platforms" },
-        engineers: { label: "ENGINEERING", desc: "Specialized collaborators" },
-        experience: { label: "EXPERIENCE", desc: "Years leading the market" },
-        coffee: { label: "ENERGY", desc: "Cups of coffee consumed" }
-      },
-      about: {
-        tag: "About Us",
-        title: "High-performance IT solutions",
-        subtitle: "Kplian provides specialized consulting services to establish the technological pillars that support our clients' growth and corporate technological progress.",
-        bullet1: {
-          title: "Open Source Specialization",
-          desc: "We offer products of the highest quality, optimizing costs by avoiding restrictive proprietary licenses and hidden expenses."
-        },
-        bullet2: {
-          title: "Cutting-edge Technology",
-          desc: "We develop customized solutions using advanced methodologies and languages tailored to your business."
-        },
-        skills: {
-          title: "Technical Capabilities",
-          skill1: "Software Development",
-          skill2: "VoIP Phone Systems",
-          skill3: "Cloud & Mobile Architecture",
-          skill4: "Premium Web Design"
-        }
-      },
-      services: {
-        tag: "Professional Services",
-        title: "What we do?",
-        subtitle: "We accompany your organization with a complete portfolio of IT consulting and custom software.",
-        item1: {
-          title: "Enterprise Resource Planning (ERP)",
-          desc: "We know that software must adapt to companies and not the other way around. We have extensive experience in the development and implementation of integrated ERP modules for large corporations."
-        },
-        item2: {
-          title: "Software Design & Development",
-          desc: "Specific needs require custom development. We have agile and innovative processes executed by a team of senior engineers focused on high quality standards."
-        },
-        item3: {
-          title: "Responsive Web Design",
-          desc: "We create fluid interactive interfaces that work on computers and mobile devices. Using clean native code, guaranteeing speed and stellar performance."
-        },
-        item4: {
-          title: "Business Intelligence (BI)",
-          desc: "We facilitate accurate and rapid decision-making. We provide BI services under the principle of \"correct information in a timely, transparent, and clear manner\"."
-        },
-        item5: {
-          title: "Information Security",
-          desc: "Comprehensive risk analysis and corporate computer security. We accompany you in threat identification, vulnerability mitigation, and secure deployment."
-        },
-        item6: {
-          title: "VoIP Phone Systems",
-          desc: "We plan, provision, and implement corporate Unified Communication solutions and robust VoIP platforms adapted to the size and demand of your business."
-        }
-      },
-      products: {
-        tag: "Technological Ecosystem",
-        title: "Our Products",
-        subtitle: "Modular software architecture and agile development frameworks created in-house.",
-        featured: {
-          badge: "FLAGSHIP FRAMEWORK",
-          title: "PXP Framework",
-          desc: "Our leading open-source framework designed for the rapid and integrated development of web applications and critical corporate platforms. Based on clean, modular architectures and optimized for relational databases like PostgreSQL.",
-          cta: "View on GitHub"
-        },
-        item1: { title: "Computerized Invoicing", desc: "Robust tax emission module, approved under current local regulations." },
-        item2: { title: "Queue Management", desc: "Monitoring, distribution, and optimization of customer service in real-time." },
-        item3: { title: "Accounting & Budgeting", desc: "Integrated financial statements, budgetary control, and live balance sheets." },
-        item4: { title: "Fixed Assets & Warehouses", desc: "Valuation tracking, depreciation, and strict inventory control." },
-        item5: { title: "Payroll & HR", desc: "Accurate calculation of salaries, tax contribution sheets, and employment history." },
-        item6: { title: "Document Management (Core)", desc: "Structuring of document flows, digital signatures, and corporate history." }
-      },
-      philosophy: {
-        quote: "We listen to your needs, study them, and propose a solution. We develop customized software for your company and fully accompany you in the corporate implementation process.",
-        author: "— KPLIAN Core Philosophy",
-        pillar1: { title: "Uniqueness", desc: "Each company is unique and needs software solutions that respond precisely to its own operational identity." },
-        pillar2: { title: "Value Creation", desc: "We believe that information technology must be the primary catalyst for business efficiency and profitability." },
-        pillar3: { title: "Adaptability", desc: "The software is what must mold itself and optimize the company's processes, never the other way around." }
-      },
-      customers: {
-        tag: "Corporate Guarantee",
-        title: "Trusted Clients",
-        subtitle: "Critical information systems successfully implemented in major corporations in the country.",
-        client1: { desc: "Development and Implementation of ERP-BOA with Accounting, Budgeting, Warehouses, Human Resources, Fixed Assets, and Treasury modules." },
-        client2: { desc: "Implementation and adaptation of Warehouse, HR, and Fixed Assets modules of the centralized ERP along with custom billing." },
-        client3: { desc: "Specialized design and implementation of the critical control and Industrial Maintenance system for the hydrocarbon logistics chain." },
-        client4: { desc: "Complete implementation of the ERP-BOA Financial Administrative System for the control of operations of the national electric grid." },
-        client5: { desc: "Technical training service and advanced consulting in comprehensive modules of ERP PXP (Security, Workflows, Purchasing)." },
-        client6: { desc: "Architecture and development of mobile solutions and database integrations for international hotel systems." }
-      },
-      footer: {
-        brand: "High-level technological pillars for the development of scalable and corporate software solutions.",
-        col1: { title: "Solutions" },
-        col2: { title: "Ecosystem", item2: "Open Source Code", item3: "ERP Modules", item4: "Cloud Services" },
-        col3: { title: "Corporate", item2: "Work Philosophy", item3: "Trusted Clients" },
-        rights: "All rights reserved. Cochabamba, Bolivia.",
-        privacy: "Privacy Policy",
-        terms: "Terms of Service"
-      }
-    },
-    pt: {
-      nav: {
-        about: "Sobre Nós",
-        services: "Serviços",
-        products: "Produtos",
-        philosophy: "Filosofia",
-        customers: "Clientes",
-        contact: "Contato"
-      },
-      hero: {
-        slide1: {
-          badge: "PXP FRAMEWORK & ENGENHARIA ÁGIL",
-          title1: "Arquitetura de Software",
-          title2: "Corporativo",
-          subtitle: "Construímos plataformas críticas de alta disponibilidade e desacoplamos monólitos em microsserviços robustos usando nosso próprio framework modular de código aberto.",
-          cta1: "Módulos ERP",
-          cta2: "Nossos Serviços"
-        },
-        slide2: {
-          badge: "A.I. COGNIÇÃO & PIPELINES DE AUTOMAÇÃO",
-          title1: "Inteligência Artificial e",
-          title2: "Fluxos de Dados",
-          subtitle: "Automatizamos a tomada de decisões corporativas críticas usando algoritmos preditivos, análise de risco e processamento inteligente de informações de negócios.",
-          cta1: "Inteligência de Negócios",
-          cta2: "Casos de Sucesso"
-        }
-      },
-      stats: {
-        commits: { label: "CÓDIGO FONTE", desc: "Commits ativos em plataformas" },
-        engineers: { label: "ENGENHARIA", desc: "Colaboradores especializados" },
-        experience: { label: "EXPERIÊNCIA", desc: "Anos liderando o mercado" },
-        coffee: { label: "ENERGIA", desc: "Xícaras de café consumidas" }
-      },
-      about: {
-        tag: "Sobre Nós",
-        title: "Soluções de TI de alto desempenho",
-        subtitle: "A Kplian oferece serviços de consultoria especializada para estabelecer os pilares tecnológicos que sustentam o crescimento de nossos clientes e o progresso tecnológico corporativo.",
-        bullet1: {
-          title: "Especialização em Código Aberto",
-          desc: "Oferecemos produtos de alta qualidade, otimizando custos ao evitar licenças proprietárias restritivas e despesas ocultas."
-        },
-        bullet2: {
-          title: "Tecnologia de Ponta",
-          desc: "Desenvolvemos soluções personalizadas utilizando metodologias e linguagens avançadas adaptadas ao seu negócio."
-        },
-        skills: {
-          title: "Capacidades Técnicas",
-          skill1: "Desenvolvimento de Software",
-          skill2: "Centrais Telefônicas (VoIP)",
-          skill3: "Arquitetura Cloud & Mobile",
-          skill4: "Design Web Premium"
-        }
-      },
-      services: {
-        tag: "Serviços Profissionais",
-        title: "O que nós fazemos?",
-        subtitle: "Acompanhamos sua organização com um portfólio completo de consultoria de TI e software customizado.",
-        item1: {
-          title: "Enterprise Resource Planning (ERP)",
-          desc: "Sabemos que o software deve se adaptar às empresas e não o contrário. Temos ampla experiência no desenvolvimento e implementação de módulos ERP integrados para grandes corporações."
-        },
-        item2: {
-          title: "Design e Desenvolvimento de Software",
-          desc: "Necessidades específicas exigem desenvolvimento sob medida. Temos processos ágeis e inovadores executados por uma equipe de engenheiros seniores focada em altos padrões de qualidade."
-        },
-        item3: {
-          title: "Design Web Responsivo",
-          desc: "Criamos interfaces interativas fluidas que funcionam em computadores e dispositivos móveis. Com código nativo limpo, garantindo velocidade e desempenho estelares."
-        },
-        item4: {
-          title: "Inteligência de Negócios (BI)",
-          desc: "Facilitamos a tomada de decisões precisas e rápidas. Oferecemos serviços de BI sob o princípio de \"informação correta de forma oportuna, transparente e clara\"."
-        },
-        item5: {
-          title: "Segurança da Informação",
-          desc: "Análise de riscos e segurança de TI empresarial abrangente. Acompanhamos você na identificação de ameaças, vulnerabilidades, mitigação e implantação segura."
-        },
-        item6: {
-          title: "Centrais Telefônicas VoIP",
-          desc: "Planejamos, provisionamos e implementamos soluções corporativas de Comunicação Unificada e plataformas VoIP robustas adaptadas ao tamanho e exigência do seu negócio."
-        }
-      },
-      products: {
-        tag: "Ecossistema Tecnológico",
-        title: "Nossos Produtos",
-        subtitle: "Arquitetura modular de software e frameworks de desenvolvimento ágil criados internamente.",
-        featured: {
-          badge: "FLAGSHIP FRAMEWORK",
-          title: "Framework PXP",
-          desc: "Nosso principal framework de código aberto projetado para o desenvolvimento rápido e integrado de aplicações web e plataformas corporativas críticas. Baseado em arquiteturas limpas e modulares e otimizado para bancos de dados relacionais como PostgreSQL.",
-          cta: "Ver no GitHub"
-        },
-        item1: { title: "Faturamento Computadorizado", desc: "Módulo de emissão fiscal robusto, homologado com a regulamentação local vigente." },
-        item2: { title: "Gestão de Filas", desc: "Monitoramento, distribuição e otimização do atendimento ao cliente em tempo real." },
-        item3: { title: "Contabilidade e Orçamentos", desc: "Demonstrações financeiras integradas, controle orçamentário e balanços patrimoniais ao vivo." },
-        item4: { title: "Ativos Fixos e Armazéns", desc: "Acompanhamento de avaliação, depreciação e controle rigoroso de estoque." },
-        item5: { title: "Folha de Pagamento e RH", desc: "Cálculo exato de salários, planilhas de contribuição previdenciária e histórico de emprego." },
-        item6: { title: "Gestão Documental (Core)", desc: "Estruturação de fluxos de documentos, assinaturas digitais e histórico corporativo." }
-      },
-      philosophy: {
-        quote: "Ouvimos as suas necessidades, estudamo-las e propomos uma solução. Desenvolvemos o software à medida da sua empresa e acompanhamo-lo totalmente no processo de implementação corporativa.",
-        author: "— Filosofia Fundamental KPLIAN",
-        pillar1: { title: "Singularidade", desc: "Cada empresa é única e precisa de soluções de software que respondam com precisão à sua própria identidade operacional." },
-        pillar2: { title: "Criação de Valor", desc: "Acreditamos que a tecnologia da informação deve ser o principal catalisador para a eficiência e rentabilidade dos negócios." },
-        pillar3: { title: "Adaptabilidade", desc: "O software é o que deve se moldar e otimizar os processos da empresa, nunca o contrário." }
-      },
-      customers: {
-        tag: "Garantia Corporativa",
-        title: "Clientes de Confiança",
-        subtitle: "Sistemas de informação críticos implementados com sucesso em grandes corporações do país.",
-        client1: { desc: "Desenvolvimento e Implementação do ERP-BOA com os módulos de Contabilidade, Orçamento, Armazéns, Recursos Humanos, Ativos Fixos e Tesouraria." },
-        client2: { desc: "Implementação e adaptação dos módulos de Armazém, Recursos Humanos e Ativos Fijos do ERP centralizado junto com faturamento sob medida." },
-        client3: { desc: "Projeto especializado e implementação do sistema de controle crítico e Manutenção Industrial para a cadeia de logística de hidrocarbonetos." },
-        client4: { desc: "Implementação completa do Sistema Administrativo Financeiro ERP-BOA para o controle das operações da rede elétrica nacional." },
-        client5: { desc: "Serviço de treinamento técnico e consultoria avançada em módulos abrangentes do ERP PXP (Segurança, Fluxos de Trabalho, Compras)." },
-        client6: { desc: "Arquitetura e desenvolvimento de soluções móveis e integrações de banco de dados para sistemas de hotéis internacionais." }
-      },
-      footer: {
-        brand: "Pilares tecnológicos de alto nível para o desenvolvimento de soluções de software escaláveis e corporativas.",
-        col1: { title: "Soluções" },
-        col2: { title: "Ecossistema", item2: "Código de Fonte Aberta", item3: "Módulos ERP", item4: "Serviços em Nuvem" },
-        col3: { title: "Corporativo", item2: "Filosofia de Trabalho", item3: "Clientes de Confiança" },
-        rights: "Todos os direitos reservados. Cochabamba, Bolivia.",
-        privacy: "Privacidade",
-        terms: "Termos de Serviço"
-      }
-    }
-  };
+	startAutoSlide();
 
-  // Language management
-  const langBtn = document.getElementById('lang-btn');
-  const langDropdown = document.getElementById('lang-dropdown');
-  const currentLangLabel = document.getElementById('current-lang-label');
-  const langOptions = document.querySelectorAll('.lang-option');
-  const mobileLangBtns = document.querySelectorAll('.mobile-lang-btn');
-  const langSelector = document.getElementById('lang-selector');
+	// Multi-Language Translation Dictionaries (ES, EN, PT)
+	const translations = {
+		es: {
+			nav: {
+				about: "Acerca de",
+				services: "Servicios",
+				products: "Productos",
+				philosophy: "Filosofía",
+				customers: "Clientes",
+				contact: "Contacto",
+			},
+			hero: {
+				slide1: {
+					badge: "PXP FRAMEWORK & INGENIERÍA ÁGIL",
+					title1: "Arquitectura de Software",
+					title2: "Empresarial",
+					subtitle:
+						"Construimos plataformas críticas de alta disponibilidad y desacoplamos monolitos hacia microservicios robustos utilizando nuestro propio framework modular Open Source.",
+					cta1: "Módulos ERP",
+					cta2: "Nuestros Servicios",
+				},
+				slide2: {
+					badge: "A.I. COGNICIÓN & PIPELINES DE AUTOMATIZACIÓN",
+					title1: "Inteligencia Artificial y",
+					title2: "Flujos de Datos",
+					subtitle:
+						"Automatizamos la toma de decisiones críticas corporativas mediante algoritmos predictivos, análisis de riesgos y procesamiento inteligente de información empresarial.",
+					cta1: "Inteligencia de Negocios",
+					cta2: "Casos de Éxito",
+				},
+			},
+			stats: {
+				commits: {
+					label: "CÓDIGO FUENTE",
+					desc: "Commits activos en plataformas",
+				},
+				engineers: {
+					label: "INGENIERÍA",
+					desc: "Colaboradores especializados",
+				},
+				experience: {
+					label: "EXPERIENCIA",
+					desc: "Años liderando el mercado",
+				},
+				coffee: { label: "ENERGÍA", desc: "Tazas de café consumidas" },
+			},
+			about: {
+				tag: "Sobre Nosotros",
+				title: "Soluciones informáticas de alto rendimiento",
+				subtitle:
+					"Kplian brinda servicios de consultoría especializada para establecer los pilares tecnológicos que sustentan el crecimiento de nuestros clientes y el progreso tecnológico corporativo.",
+				bullet1: {
+					title: "Especialización en Open Source",
+					desc: "Ofrecemos productos de la más alta calidad optimizando costos al evitar licencias propietarias restrictivas y gastos ocultos.",
+				},
+				bullet2: {
+					title: "Tecnología de Vanguardia",
+					desc: "Desarrollamos soluciones personalizadas utilizando metodologías y lenguajes avanzados adaptados a tu negocio.",
+				},
+				skills: {
+					title: "Capacidades Técnicas",
+					skill1: "Desarrollo de Software",
+					skill2: "Centrales Telefónicas (VoIP)",
+					skill3: "Arquitectura Cloud & Mobile",
+					skill4: "Diseño Web Premium",
+				},
+			},
+			services: {
+				tag: "Servicios Profesionales",
+				title: "¿Qué es lo que hacemos?",
+				subtitle:
+					"Acompañamos a su organización con un portafolio completo de consultoría de TI y software personalizado.",
+				item1: {
+					title: "Enterprise Resource Planning (ERP)",
+					desc: "Sabemos que el software debe adaptarse a las empresas y no al revés. Contamos con amplia experiencia en el desarrollo e implantación de módulos ERP integrados para grandes corporaciones.",
+				},
+				item2: {
+					title: "Diseño y Desarrollo de Software",
+					desc: "Necesidades específicas exigen desarrollo a la medida. Contamos con procesos ágiles e innovadores ejecutados por un equipo de ingenieros senior enfocado en altos estándares de calidad.",
+				},
+				item3: {
+					title: "Diseño Web Responsivo",
+					desc: "Creamos interfaces interactivas fluidas que funcionan en computadoras y dispositivos móviles. Con código nativo limpio, garantizando velocidad y rendimiento estelar.",
+				},
+				item4: {
+					title: "Inteligencia de Negocios (BI)",
+					desc: 'Facilitamos la toma de decisiones precisas y rápidas. Proveemos servicios de BI bajo el principio de "información correcta de manera oportuna, transparente y clara".',
+				},
+				item5: {
+					title: "Seguridad de Información",
+					desc: "Análisis de riesgos y seguridad informática empresarial integral. Le acompañamos en la identificación de amenazas, vulnerabilidades, mitigación y despliegue seguro.",
+				},
+				item6: {
+					title: "Centrales Telefónicas VoIP",
+					desc: "Planificamos, provisionamos e implementamos soluciones corporativas de Comunicación Unificada y plataformas VoIP robustas adaptadas al tamaño y exigencia de su negocio.",
+				},
+			},
+			products: {
+				tag: "Ecosistema Tecnológico",
+				title: "Nuestros Productos",
+				subtitle:
+					"Arquitectura modular de software y frameworks de desarrollo ágil creados internamente.",
+				featured: {
+					badge: "FLAGSHIP FRAMEWORK",
+					title: "Framework PXP",
+					desc: "Nuestro framework open-source líder diseñado para el desarrollo rápido e integrado de aplicaciones web y plataformas corporativas críticas. Basado en arquitecturas limpias, modulares y optimizado para bases de datos relacionales como PostgreSQL.",
+					cta: "Ver en GitHub",
+				},
+				item1: {
+					title: "Facturación Computarizada",
+					desc: "Módulo de emisión fiscal robusto, homologado con la normativa local vigente.",
+				},
+				item2: {
+					title: "Gestión de Colas",
+					desc: "Monitoreo, distribución y optimización de la atención al cliente en tiempo real.",
+				},
+				item3: {
+					title: "Contabilidad y Presupuestos",
+					desc: "Estados financieros integrados, control presupuestario y balances en vivo.",
+				},
+				item4: {
+					title: "Activos Fijos y Almacenes",
+					desc: "Seguimiento de valorización, depreciación y control estricto de inventarios.",
+				},
+				item5: {
+					title: "Planillas & Recursos Humanos",
+					desc: "Cálculo exacto de salarios, planillas de aportes fiscales e historial laboral.",
+				},
+				item6: {
+					title: "Gestión Documental (Core)",
+					desc: "Estructuración de flujos documentales, firmas digitales e histórico corporativo.",
+				},
+			},
+			philosophy: {
+				quote: "Escuchamos sus necesidades, las estudiamos y planteamos una solución. Desarrollamos el software a la medida de su empresa y le acompañamos plenamente en el proceso de implantación corporativo.",
+				author: "— Filosofía Fundamental KPLIAN",
+				pillar1: {
+					title: "Singularidad",
+					desc: "Cada empresa es única y necesita soluciones de software que respondan con precisión a su propia identidad operativa.",
+				},
+				pillar2: {
+					title: "Creación de Valor",
+					desc: "Creemos que la tecnología de información debe ser el catalizador principal de la eficiencia y la rentabilidad empresarial.",
+				},
+				pillar3: {
+					title: "Adaptabilidad",
+					desc: "El software es el que debe amoldarse y optimizar los procesos de la empresa, nunca a la inversa.",
+				},
+			},
+			customers: {
+				tag: "Garantía Corporativa",
+				title: "Clientes de Confianza",
+				subtitle:
+					"Sistemas críticos de información implantados con éxito en importantes corporaciones del país.",
+				client1: {
+					desc: "Desarrollo e Implementación del ERP-BOA con los módulos de Contabilidad, Presupuestos, Almacenes, Recursos Humanos, Activos Fijos y Tesorería.",
+				},
+				client2: {
+					desc: "Implementación y adecuación de módulos de Almacenes, Recursos Humanos y Activos Fijos del ERP centralizado junto a facturación a medida.",
+				},
+				client3: {
+					desc: "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos.",
+				},
+				client4: {
+					desc: "Implementación completa del Sistema Administrativo Financiero ERP-BOA para el control de operaciones de la red eléctrica nacional.",
+				},
+				client5: {
+					desc: "Servicio de formación técnica y consultoría avanzada en módulos integrales del ERP PXP (Seguridad, Flujos de Trabajo, Compras).",
+				},
+				client6: {
+					desc: "Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales.",
+				},
+			},
+			footer: {
+				brand: "Pilares tecnológicos de alto nivel para el desarrollo de soluciones de software escalables y corporativas.",
+				col1: { title: "Soluciones" },
+				col2: {
+					title: "Ecosistema",
+					item2: "Código Open Source",
+					item3: "Módulos ERP",
+					item4: "Servicios en la Nube",
+				},
+				col3: {
+					title: "Corporativo",
+					item2: "Filosofía de Trabajo",
+					item3: "Clientes de Confianza",
+				},
+				rights: "Todos los derechos reservados. Cochabamba, Bolivia.",
+				privacy: "Privacidad",
+				terms: "Términos de Servicio",
+			},
+		},
+		en: {
+			nav: {
+				about: "About Us",
+				services: "Services",
+				products: "Products",
+				philosophy: "Philosophy",
+				customers: "Clients",
+				contact: "Contact",
+			},
+			hero: {
+				slide1: {
+					badge: "PXP FRAMEWORK & AGILE ENGINEERING",
+					title1: "Enterprise Software",
+					title2: "Architecture",
+					subtitle:
+						"We build critical high-availability platforms and decouple monoliths into robust microservices using our own open-source modular framework.",
+					cta1: "ERP Modules",
+					cta2: "Our Services",
+				},
+				slide2: {
+					badge: "A.I. COGNITION & AUTOMATION PIPELINES",
+					title1: "Artificial Intelligence &",
+					title2: "Data Flows",
+					subtitle:
+						"We automate critical corporate decision-making using predictive algorithms, risk analysis, and intelligent business information processing.",
+					cta1: "Business Intelligence",
+					cta2: "Success Cases",
+				},
+			},
+			stats: {
+				commits: {
+					label: "SOURCE CODE",
+					desc: "Active commits across platforms",
+				},
+				engineers: {
+					label: "ENGINEERING",
+					desc: "Specialized collaborators",
+				},
+				experience: {
+					label: "EXPERIENCE",
+					desc: "Years leading the market",
+				},
+				coffee: { label: "ENERGY", desc: "Cups of coffee consumed" },
+			},
+			about: {
+				tag: "About Us",
+				title: "High-performance IT solutions",
+				subtitle:
+					"Kplian provides specialized consulting services to establish the technological pillars that support our clients' growth and corporate technological progress.",
+				bullet1: {
+					title: "Open Source Specialization",
+					desc: "We offer products of the highest quality, optimizing costs by avoiding restrictive proprietary licenses and hidden expenses.",
+				},
+				bullet2: {
+					title: "Cutting-edge Technology",
+					desc: "We develop customized solutions using advanced methodologies and languages tailored to your business.",
+				},
+				skills: {
+					title: "Technical Capabilities",
+					skill1: "Software Development",
+					skill2: "VoIP Phone Systems",
+					skill3: "Cloud & Mobile Architecture",
+					skill4: "Premium Web Design",
+				},
+			},
+			services: {
+				tag: "Professional Services",
+				title: "What we do?",
+				subtitle:
+					"We accompany your organization with a complete portfolio of IT consulting and custom software.",
+				item1: {
+					title: "Enterprise Resource Planning (ERP)",
+					desc: "We know that software must adapt to companies and not the other way around. We have extensive experience in the development and implementation of integrated ERP modules for large corporations.",
+				},
+				item2: {
+					title: "Software Design & Development",
+					desc: "Specific needs require custom development. We have agile and innovative processes executed by a team of senior engineers focused on high quality standards.",
+				},
+				item3: {
+					title: "Responsive Web Design",
+					desc: "We create fluid interactive interfaces that work on computers and mobile devices. Using clean native code, guaranteeing speed and stellar performance.",
+				},
+				item4: {
+					title: "Business Intelligence (BI)",
+					desc: 'We facilitate accurate and rapid decision-making. We provide BI services under the principle of "correct information in a timely, transparent, and clear manner".',
+				},
+				item5: {
+					title: "Information Security",
+					desc: "Comprehensive risk analysis and corporate computer security. We accompany you in threat identification, vulnerability mitigation, and secure deployment.",
+				},
+				item6: {
+					title: "VoIP Phone Systems",
+					desc: "We plan, provision, and implement corporate Unified Communication solutions and robust VoIP platforms adapted to the size and demand of your business.",
+				},
+			},
+			products: {
+				tag: "Technological Ecosystem",
+				title: "Our Products",
+				subtitle:
+					"Modular software architecture and agile development frameworks created in-house.",
+				featured: {
+					badge: "FLAGSHIP FRAMEWORK",
+					title: "PXP Framework",
+					desc: "Our leading open-source framework designed for the rapid and integrated development of web applications and critical corporate platforms. Based on clean, modular architectures and optimized for relational databases like PostgreSQL.",
+					cta: "View on GitHub",
+				},
+				item1: {
+					title: "Computerized Invoicing",
+					desc: "Robust tax emission module, approved under current local regulations.",
+				},
+				item2: {
+					title: "Queue Management",
+					desc: "Monitoring, distribution, and optimization of customer service in real-time.",
+				},
+				item3: {
+					title: "Accounting & Budgeting",
+					desc: "Integrated financial statements, budgetary control, and live balance sheets.",
+				},
+				item4: {
+					title: "Fixed Assets & Warehouses",
+					desc: "Valuation tracking, depreciation, and strict inventory control.",
+				},
+				item5: {
+					title: "Payroll & HR",
+					desc: "Accurate calculation of salaries, tax contribution sheets, and employment history.",
+				},
+				item6: {
+					title: "Document Management (Core)",
+					desc: "Structuring of document flows, digital signatures, and corporate history.",
+				},
+			},
+			philosophy: {
+				quote: "We listen to your needs, study them, and propose a solution. We develop customized software for your company and fully accompany you in the corporate implementation process.",
+				author: "— KPLIAN Core Philosophy",
+				pillar1: {
+					title: "Uniqueness",
+					desc: "Each company is unique and needs software solutions that respond precisely to its own operational identity.",
+				},
+				pillar2: {
+					title: "Value Creation",
+					desc: "We believe that information technology must be the primary catalyst for business efficiency and profitability.",
+				},
+				pillar3: {
+					title: "Adaptability",
+					desc: "The software is what must mold itself and optimize the company's processes, never the other way around.",
+				},
+			},
+			customers: {
+				tag: "Corporate Guarantee",
+				title: "Trusted Clients",
+				subtitle:
+					"Critical information systems successfully implemented in major corporations in the country.",
+				client1: {
+					desc: "Development and Implementation of ERP-BOA with Accounting, Budgeting, Warehouses, Human Resources, Fixed Assets, and Treasury modules.",
+				},
+				client2: {
+					desc: "Implementation and adaptation of Warehouse, HR, and Fixed Assets modules of the centralized ERP along with custom billing.",
+				},
+				client3: {
+					desc: "Specialized design and implementation of the critical control and Industrial Maintenance system for the hydrocarbon logistics chain.",
+				},
+				client4: {
+					desc: "Complete implementation of the ERP-BOA Financial Administrative System for the control of operations of the national electric grid.",
+				},
+				client5: {
+					desc: "Technical training service and advanced consulting in comprehensive modules of ERP PXP (Security, Workflows, Purchasing).",
+				},
+				client6: {
+					desc: "Architecture and development of mobile solutions and database integrations for international hotel systems.",
+				},
+			},
+			footer: {
+				brand: "High-level technological pillars for the development of scalable and corporate software solutions.",
+				col1: { title: "Solutions" },
+				col2: {
+					title: "Ecosystem",
+					item2: "Open Source Code",
+					item3: "ERP Modules",
+					item4: "Cloud Services",
+				},
+				col3: {
+					title: "Corporate",
+					item2: "Work Philosophy",
+					item3: "Trusted Clients",
+				},
+				rights: "All rights reserved. Cochabamba, Bolivia.",
+				privacy: "Privacy Policy",
+				terms: "Terms of Service",
+			},
+		},
+		pt: {
+			nav: {
+				about: "Sobre Nós",
+				services: "Serviços",
+				products: "Produtos",
+				philosophy: "Filosofia",
+				customers: "Clientes",
+				contact: "Contato",
+			},
+			hero: {
+				slide1: {
+					badge: "PXP FRAMEWORK & ENGENHARIA ÁGIL",
+					title1: "Arquitetura de Software",
+					title2: "Corporativo",
+					subtitle:
+						"Construímos plataformas críticas de alta disponibilidade e desacoplamos monólitos em microsserviços robustos usando nosso próprio framework modular de código aberto.",
+					cta1: "Módulos ERP",
+					cta2: "Nossos Serviços",
+				},
+				slide2: {
+					badge: "A.I. COGNIÇÃO & PIPELINES DE AUTOMAÇÃO",
+					title1: "Inteligência Artificial e",
+					title2: "Fluxos de Dados",
+					subtitle:
+						"Automatizamos a tomada de decisões corporativas críticas usando algoritmos preditivos, análise de risco e processamento inteligente de informações de negócios.",
+					cta1: "Inteligência de Negócios",
+					cta2: "Casos de Sucesso",
+				},
+			},
+			stats: {
+				commits: {
+					label: "CÓDIGO FONTE",
+					desc: "Commits ativos em plataformas",
+				},
+				engineers: {
+					label: "ENGENHARIA",
+					desc: "Colaboradores especializados",
+				},
+				experience: {
+					label: "EXPERIÊNCIA",
+					desc: "Anos liderando o mercado",
+				},
+				coffee: {
+					label: "ENERGIA",
+					desc: "Xícaras de café consumidas",
+				},
+			},
+			about: {
+				tag: "Sobre Nós",
+				title: "Soluções de TI de alto desempenho",
+				subtitle:
+					"A Kplian oferece serviços de consultoria especializada para estabelecer os pilares tecnológicos que sustentam o crescimento de nossos clientes e o progresso tecnológico corporativo.",
+				bullet1: {
+					title: "Especialização em Código Aberto",
+					desc: "Oferecemos produtos de alta qualidade, otimizando custos ao evitar licenças proprietárias restritivas e despesas ocultas.",
+				},
+				bullet2: {
+					title: "Tecnologia de Ponta",
+					desc: "Desenvolvemos soluções personalizadas utilizando metodologias e linguagens avançadas adaptadas ao seu negócio.",
+				},
+				skills: {
+					title: "Capacidades Técnicas",
+					skill1: "Desenvolvimento de Software",
+					skill2: "Centrais Telefônicas (VoIP)",
+					skill3: "Arquitetura Cloud & Mobile",
+					skill4: "Design Web Premium",
+				},
+			},
+			services: {
+				tag: "Serviços Profissionais",
+				title: "O que nós fazemos?",
+				subtitle:
+					"Acompanhamos sua organização com um portfólio completo de consultoria de TI e software customizado.",
+				item1: {
+					title: "Enterprise Resource Planning (ERP)",
+					desc: "Sabemos que o software deve se adaptar às empresas e não o contrário. Temos ampla experiência no desenvolvimento e implementação de módulos ERP integrados para grandes corporações.",
+				},
+				item2: {
+					title: "Design e Desenvolvimento de Software",
+					desc: "Necessidades específicas exigem desenvolvimento sob medida. Temos processos ágeis e inovadores executados por uma equipe de engenheiros seniores focada em altos padrões de qualidade.",
+				},
+				item3: {
+					title: "Design Web Responsivo",
+					desc: "Criamos interfaces interativas fluidas que funcionam em computadores e dispositivos móveis. Com código nativo limpo, garantindo velocidade e desempenho estelares.",
+				},
+				item4: {
+					title: "Inteligência de Negócios (BI)",
+					desc: 'Facilitamos a tomada de decisões precisas e rápidas. Oferecemos serviços de BI sob o princípio de "informação correta de forma oportuna, transparente e clara".',
+				},
+				item5: {
+					title: "Segurança da Informação",
+					desc: "Análise de riscos e segurança de TI empresarial abrangente. Acompanhamos você na identificação de ameaças, vulnerabilidades, mitigação e implantação segura.",
+				},
+				item6: {
+					title: "Centrais Telefônicas VoIP",
+					desc: "Planejamos, provisionamos e implementamos soluções corporativas de Comunicação Unificada e plataformas VoIP robustas adaptadas ao tamanho e exigência do seu negócio.",
+				},
+			},
+			products: {
+				tag: "Ecossistema Tecnológico",
+				title: "Nossos Produtos",
+				subtitle:
+					"Arquitetura modular de software e frameworks de desenvolvimento ágil criados internamente.",
+				featured: {
+					badge: "FLAGSHIP FRAMEWORK",
+					title: "Framework PXP",
+					desc: "Nosso principal framework de código aberto projetado para o desenvolvimento rápido e integrado de aplicações web e plataformas corporativas críticas. Baseado em arquiteturas limpas e modulares e otimizado para bancos de dados relacionais como PostgreSQL.",
+					cta: "Ver no GitHub",
+				},
+				item1: {
+					title: "Faturamento Computadorizado",
+					desc: "Módulo de emissão fiscal robusto, homologado com a regulamentação local vigente.",
+				},
+				item2: {
+					title: "Gestão de Filas",
+					desc: "Monitoramento, distribuição e otimização do atendimento ao cliente em tempo real.",
+				},
+				item3: {
+					title: "Contabilidade e Orçamentos",
+					desc: "Demonstrações financeiras integradas, controle orçamentário e balanços patrimoniais ao vivo.",
+				},
+				item4: {
+					title: "Ativos Fixos e Armazéns",
+					desc: "Acompanhamento de avaliação, depreciação e controle rigoroso de estoque.",
+				},
+				item5: {
+					title: "Folha de Pagamento e RH",
+					desc: "Cálculo exato de salários, planilhas de contribuição previdenciária e histórico de emprego.",
+				},
+				item6: {
+					title: "Gestão Documental (Core)",
+					desc: "Estruturação de fluxos de documentos, assinaturas digitais e histórico corporativo.",
+				},
+			},
+			philosophy: {
+				quote: "Ouvimos as suas necessidades, estudamo-las e propomos uma solução. Desenvolvemos o software à medida da sua empresa e acompanhamo-lo totalmente no processo de implementação corporativa.",
+				author: "— Filosofia Fundamental KPLIAN",
+				pillar1: {
+					title: "Singularidade",
+					desc: "Cada empresa é única e precisa de soluções de software que respondam com precisão à sua própria identidade operacional.",
+				},
+				pillar2: {
+					title: "Criação de Valor",
+					desc: "Acreditamos que a tecnologia da informação deve ser o principal catalisador para a eficiência e rentabilidade dos negócios.",
+				},
+				pillar3: {
+					title: "Adaptabilidade",
+					desc: "O software é o que deve se moldar e otimizar os processos da empresa, nunca o contrário.",
+				},
+			},
+			customers: {
+				tag: "Garantia Corporativa",
+				title: "Clientes de Confiança",
+				subtitle:
+					"Sistemas de informação críticos implementados com sucesso em grandes corporações do país.",
+				client1: {
+					desc: "Desenvolvimento e Implementação do ERP-BOA com os módulos de Contabilidade, Orçamento, Armazéns, Recursos Humanos, Ativos Fixos e Tesouraria.",
+				},
+				client2: {
+					desc: "Implementação e adaptação dos módulos de Armazém, Recursos Humanos e Ativos Fijos do ERP centralizado junto com faturamento sob medida.",
+				},
+				client3: {
+					desc: "Projeto especializado e implementação do sistema de controle crítico e Manutenção Industrial para a cadeia de logística de hidrocarbonetos.",
+				},
+				client4: {
+					desc: "Implementação completa do Sistema Administrativo Financeiro ERP-BOA para o controle das operações da rede elétrica nacional.",
+				},
+				client5: {
+					desc: "Serviço de treinamento técnico e consultoria avançada em módulos abrangentes do ERP PXP (Segurança, Fluxos de Trabalho, Compras).",
+				},
+				client6: {
+					desc: "Arquitetura e desenvolvimento de soluções móveis e integrações de banco de dados para sistemas de hotéis internacionais.",
+				},
+			},
+			footer: {
+				brand: "Pilares tecnológicos de alto nível para o desenvolvimento de soluções de software escaláveis e corporativas.",
+				col1: { title: "Soluções" },
+				col2: {
+					title: "Ecossistema",
+					item2: "Código de Fonte Aberta",
+					item3: "Módulos ERP",
+					item4: "Serviços em Nuvem",
+				},
+				col3: {
+					title: "Corporativo",
+					item2: "Filosofia de Trabalho",
+					item3: "Clientes de Confiança",
+				},
+				rights: "Todos os direitos reservados. Cochabamba, Bolivia.",
+				privacy: "Privacidade",
+				terms: "Termos de Serviço",
+			},
+		},
+	};
 
-  // Toggle desktop dropdown
-  langBtn?.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isExpanded = langBtn.getAttribute('aria-expanded') === 'true';
-    langBtn.setAttribute('aria-expanded', (!isExpanded).toString());
-    langDropdown?.classList.toggle('show');
-    langSelector?.classList.toggle('active');
-  });
+	// Language management
+	const langBtn = document.getElementById("lang-btn");
+	const langDropdown = document.getElementById("lang-dropdown");
+	const currentLangLabel = document.getElementById("current-lang-label");
+	const langOptions = document.querySelectorAll(".lang-option");
+	const mobileLangBtns = document.querySelectorAll(".mobile-lang-btn");
+	const langSelector = document.getElementById("lang-selector");
 
-  // Close dropdown on click outside
-  document.addEventListener('click', () => {
-    langDropdown?.classList.remove('show');
-    langSelector?.classList.remove('active');
-    langBtn?.setAttribute('aria-expanded', 'false');
-  });
+	// Toggle desktop dropdown
+	langBtn?.addEventListener("click", (e) => {
+		e.stopPropagation();
+		const isExpanded = langBtn.getAttribute("aria-expanded") === "true";
+		langBtn.setAttribute("aria-expanded", (!isExpanded).toString());
+		langDropdown?.classList.toggle("show");
+		langSelector?.classList.toggle("active");
+	});
 
-  // Change language function
-  function setLanguage(lang: 'es' | 'en' | 'pt') {
-    localStorage.setItem('kplian-lang', lang);
-    currentLangLabel!.innerText = lang.toUpperCase();
+	// Close dropdown on click outside
+	document.addEventListener("click", () => {
+		langDropdown?.classList.remove("show");
+		langSelector?.classList.remove("active");
+		langBtn?.setAttribute("aria-expanded", "false");
+	});
 
-    // Update active dropdown state
-    langOptions.forEach(opt => {
-      if (opt.getAttribute('data-lang') === lang) {
-        opt.classList.add('active');
-      } else {
-        opt.classList.remove('active');
-      }
-    });
+	// Change language function
+	function setLanguage(lang: "es" | "en" | "pt") {
+		localStorage.setItem("kplian-lang", lang);
+		currentLangLabel!.innerText = lang.toUpperCase();
 
-    // Update active mobile state
-    mobileLangBtns.forEach(btn => {
-      if (btn.getAttribute('data-lang') === lang) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
+		// Update active dropdown state
+		langOptions.forEach((opt) => {
+			if (opt.getAttribute("data-lang") === lang) {
+				opt.classList.add("active");
+			} else {
+				opt.classList.remove("active");
+			}
+		});
 
-    // Apply translations with beautiful Nvidia smooth transitions
-    const translatableElements = document.querySelectorAll('[data-i18n]');
-    translatableElements.forEach(el => el.classList.add('i18n-fade'));
+		// Update active mobile state
+		mobileLangBtns.forEach((btn) => {
+			if (btn.getAttribute("data-lang") === lang) {
+				btn.classList.add("active");
+			} else {
+				btn.classList.remove("active");
+			}
+		});
 
-    setTimeout(() => {
-      translatableElements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (!key) return;
+		// Apply translations with beautiful Nvidia smooth transitions
+		const translatableElements = document.querySelectorAll("[data-i18n]");
+		translatableElements.forEach((el) => el.classList.add("i18n-fade"));
 
-        const keys = key.split('.');
-        let translation: any = translations[lang];
-        
-        for (const k of keys) {
-          if (translation) {
-            translation = translation[k];
-          }
-        }
+		setTimeout(() => {
+			translatableElements.forEach((el) => {
+				const key = el.getAttribute("data-i18n");
+				if (!key) return;
 
-        if (translation) {
-          if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-            el.setAttribute('placeholder', translation);
-          } else {
-            el.innerHTML = translation;
-          }
-        }
-      });
+				const keys = key.split(".");
+				let translation: any = translations[lang];
 
-      // Fade-in elements
-      translatableElements.forEach(el => el.classList.remove('i18n-fade'));
-    }, 250);
-  }
+				for (const k of keys) {
+					if (translation) {
+						translation = translation[k];
+					}
+				}
 
-  // Bind desktop options
-  langOptions.forEach(option => {
-    option.addEventListener('click', () => {
-      const selectedLang = option.getAttribute('data-lang') as 'es' | 'en' | 'pt';
-      setLanguage(selectedLang);
-    });
-  });
+				if (translation) {
+					if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
+						el.setAttribute("placeholder", translation);
+					} else {
+						el.innerHTML = translation;
+					}
+				}
+			});
 
-  // Bind mobile options
-  mobileLangBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const selectedLang = btn.getAttribute('data-lang') as 'es' | 'en' | 'pt';
-      setLanguage(selectedLang);
-    });
-  });
+			// Fade-in elements
+			translatableElements.forEach((el) =>
+				el.classList.remove("i18n-fade"),
+			);
+		}, 250);
+	}
 
-  // Load language from storage on init
-  const savedLang = localStorage.getItem('kplian-lang') as 'es' | 'en' | 'pt' || 'es';
-  if (savedLang !== 'es') {
-    setLanguage(savedLang);
-  }
+	// Bind desktop options
+	langOptions.forEach((option) => {
+		option.addEventListener("click", () => {
+			const selectedLang = option.getAttribute("data-lang") as
+				| "es"
+				| "en"
+				| "pt";
+			setLanguage(selectedLang);
+		});
+	});
+
+	// Bind mobile options
+	mobileLangBtns.forEach((btn) => {
+		btn.addEventListener("click", () => {
+			const selectedLang = btn.getAttribute("data-lang") as
+				| "es"
+				| "en"
+				| "pt";
+			setLanguage(selectedLang);
+		});
+	});
+
+	// Load language from storage on init
+	const savedLang =
+		(localStorage.getItem("kplian-lang") as "es" | "en" | "pt") || "es";
+	if (savedLang !== "es") {
+		setLanguage(savedLang);
+	}
 </script>
 
 <style>
-  /* Header & Navigation (Nvidia White Style) */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: var(--header-height);
-    background: #ffffff;
-    border-bottom: 1px solid #e5e7eb;
-    z-index: 100;
-    transition: var(--transition-smooth);
-  }
-
-  .navbar.scrolled {
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-    border-bottom: 1px solid #e5e7eb;
-  }
-
-  .nav-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    text-decoration: none;
-  }
-
-  .logo-img {
-    height: 42px;
-    width: auto;
-    object-fit: contain;
-    filter: hue-rotate(195deg) saturate(1.3) brightness(1.1);
-    transition: var(--transition-smooth);
-  }
-
-  .logo-img:hover {
-    filter: hue-rotate(195deg) saturate(1.6) brightness(1.3) drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 2.25rem;
-  }
-
-  .nav-item {
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: #4b5563;
-    text-decoration: none;
-    transition: var(--transition-smooth);
-    letter-spacing: 0.03em;
-  }
-
-  .nav-item:hover {
-    color: #000000;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Language Selector Styles (Nvidia Style) */
-  .lang-selector {
-    position: relative;
-    display: inline-block;
-  }
-
-  .lang-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #4b5563;
-    padding: 0.5rem 0.65rem;
-    border-radius: 4px;
-    transition: var(--transition-smooth);
-  }
-
-  .lang-btn:hover {
-    color: #000000;
-    background: rgba(0, 0, 0, 0.03);
-  }
-
-  .globe-icon {
-    width: 1.05rem;
-    height: 1.05rem;
-  }
-
-  .arrow-icon {
-    width: 0.65rem;
-    height: 0.65rem;
-    transition: transform 0.3s ease;
-  }
-
-  .lang-selector.active .arrow-icon {
-    transform: rotate(180deg);
-  }
-
-  .lang-dropdown {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    margin-top: 0.5rem;
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    min-width: 140px;
-    display: flex;
-    flex-direction: column;
-    padding: 0.35rem;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-5px);
-    transition: var(--transition-smooth);
-    z-index: 110;
-  }
-
-  .lang-dropdown.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  .lang-option {
-    background: transparent;
-    border: none;
-    text-align: left;
-    padding: 0.5rem 0.75rem;
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: #374151;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: var(--transition-smooth);
-    width: 100%;
-  }
-
-  .lang-option:hover {
-    background: rgba(59, 130, 246, 0.05);
-    color: #3b82f6;
-  }
-
-  .lang-option.active {
-    color: #3b82f6;
-    background: rgba(59, 130, 246, 0.08);
-    font-weight: 600;
-  }
-
-  /* i18n smooth transition fade */
-  .i18n-fade {
-    opacity: 0 !important;
-    transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
-  }
-
-  .btn-nav {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #3b82f6;
-    text-decoration: none;
-    border: 1px solid rgba(59, 130, 246, 0.2);
-    padding: 0.5rem 1.25rem;
-    border-radius: 4px;
-    background: rgba(59, 130, 246, 0.03);
-    transition: var(--transition-smooth);
-  }
-
-  .btn-nav:hover {
-    background: #3b82f6;
-    color: #ffffff;
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
-    border-color: #3b82f6;
-  }
-
-  /* Mobile toggle button */
-  .mobile-toggle {
-    display: none;
-    flex-direction: column;
-    gap: 6px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
-  }
-
-  .mobile-toggle span {
-    width: 24px;
-    height: 2px;
-    background-color: #1f2937;
-    transition: var(--transition-smooth);
-  }
-
-  /* Mobile menu drawer */
-  .mobile-menu {
-    position: fixed;
-    top: var(--header-height);
-    left: 0;
-    width: 100%;
-    height: calc(100vh - var(--header-height));
-    background: rgba(3, 7, 18, 0.98);
-    backdrop-filter: blur(20px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: var(--transition-smooth);
-    z-index: 99;
-  }
-
-  .mobile-menu.active {
-    opacity: 1;
-    pointer-events: all;
-    transform: translateY(0);
-  }
-
-  .mobile-nav-item {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-weight: 500;
-    transition: var(--transition-smooth);
-  }
-
-  .mobile-nav-item:hover {
-    color: var(--color-accent);
-  }
-
-  .mobile-btn {
-    border: 1px solid var(--color-accent);
-    padding: 0.75rem 2.5rem;
-    border-radius: 6px;
-    color: var(--color-accent);
-  }
-
-  /* Mobile Language Selector row */
-  .mobile-lang-row {
-    display: flex;
-    gap: 0.75rem;
-    justify-content: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 1rem 0;
-    width: 70%;
-  }
-
-  .mobile-lang-btn {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    font-weight: 600;
-    width: 3.2rem;
-    height: 2.2rem;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: var(--transition-smooth);
-  }
-
-  .mobile-lang-btn:hover {
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .mobile-lang-btn.active {
-    background: #3b82f6;
-    color: #fff;
-    border-color: #3b82f6;
-    box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
-  }
-
-  /* Cinematic Hero Slider (Nvidia Style) */
-  .hero-slider-section {
-    position: relative;
-    width: 100%;
-    height: 85vh;
-    min-height: 650px;
-    overflow: hidden;
-  }
-
-  .slider-container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-  .hero-slide {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1), visibility 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 1;
-  }
-
-  .hero-slide.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
-  }
-
-  .hero-slide-content {
-    text-align: left;
-    max-width: 850px;
-    z-index: 10;
-  }
-
-  /* Slider arrows */
-  .slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(3, 7, 18, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: #ffffff;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 10;
-    transition: var(--transition-smooth);
-    backdrop-filter: blur(10px);
-  }
-
-  .slider-arrow:hover {
-    background: #ffffff;
-    color: #000000;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
-  }
-
-  .prev-arrow {
-    left: 2rem;
-  }
-
-  .next-arrow {
-    right: 2rem;
-  }
-
-  .slider-arrow svg {
-    width: 1.25rem;
-    height: 1.25rem;
-  }
-
-  /* Slide Indicators / Dots */
-  .slider-indicators {
-    position: absolute;
-    bottom: 2.5rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.75rem;
-    z-index: 10;
-  }
-
-  .indicator {
-    width: 40px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    border-radius: 10px;
-    transition: var(--transition-smooth);
-  }
-
-  .indicator.active {
-    background: var(--color-accent);
-    box-shadow: 0 0 8px var(--color-accent);
-    width: 60px;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(11, 19, 41, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0.5rem 1.25rem;
-    border-radius: 100px;
-    margin-bottom: 2rem;
-    backdrop-filter: blur(10px);
-  }
-
-  .badge-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--color-accent);
-    box-shadow: 0 0 10px var(--color-accent);
-    animation: pulse 1.8s infinite;
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(0.9); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(0.9); opacity: 0.5; }
-  }
-
-  .badge-txt {
-    font-size: 0.7rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: var(--text-secondary);
-  }
-
-  .hero-title {
-    font-size: clamp(2.3rem, 4.5vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: clamp(0.95rem, 1.8vw, 1.15rem);
-    font-weight: 300;
-    color: var(--text-secondary);
-    max-width: 760px;
-    margin-bottom: 3rem;
-    line-height: 1.7;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 1.25rem;
-    align-items: center;
-  }
-
-  /* Stats / Specs Section */
-  .stats-section {
-    background: linear-gradient(180deg, transparent 0%, rgba(11, 19, 41, 0.5) 100%);
-    border-y: 1px solid rgba(255, 255, 255, 0.02);
-    padding: 4rem 0;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-  }
-
-  .stat-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-    border-right: 1px solid rgba(255, 255, 255, 0.03);
-  }
-
-  .stat-card:last-child {
-    border-right: none;
-  }
-
-  .stat-label {
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: var(--text-muted);
-    letter-spacing: 0.2em;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-number {
-    font-size: 3rem;
-    font-weight: 800;
-    letter-spacing: -0.03em;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-desc {
-    font-size: 0.8rem;
-    color: var(--text-secondary);
-    font-weight: 400;
-  }
-
-  /* About grid section */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 4rem;
-    align-items: center;
-  }
-
-  .about-bullets {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .bullet-item {
-    display: flex;
-    gap: 1.25rem;
-  }
-
-  .bullet-icon {
-    flex-shrink: 0;
-    width: 2.75rem;
-    height: 2.75rem;
-    border-radius: 8px;
-    background: rgba(0, 240, 255, 0.08);
-    border: 1px solid rgba(0, 240, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-accent);
-  }
-
-  .bullet-icon svg {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .bullet-text h3 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.35rem;
-  }
-
-  .bullet-text p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-  }
-
-  .skills-card {
-    padding: 3rem;
-  }
-
-  .skills-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 2.5rem;
-    letter-spacing: -0.01em;
-  }
-
-  .skill-bar-wrap {
-    margin-bottom: 2rem;
-  }
-
-  .skill-bar-wrap:last-child {
-    margin-bottom: 0;
-  }
-
-  .skill-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    margin-bottom: 0.65rem;
-  }
-
-  .skill-bar {
-    width: 100%;
-    height: 6px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 10px;
-    overflow: hidden;
-  }
-
-  .skill-progress {
-    height: 100%;
-    background: linear-gradient(90deg, var(--color-accent-blue) 0%, var(--color-accent) 100%);
-    border-radius: 10px;
-  }
-
-  /* Services section layout */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    gap: 2rem;
-  }
-
-  .service-card {
-    padding: 3rem 2.5rem;
-  }
-
-  .service-icon-wrap {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 10px;
-    background: rgba(0, 240, 255, 0.08);
-    border: 1px solid rgba(0, 240, 255, 0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-accent);
-    margin-bottom: 2rem;
-    transition: var(--transition-smooth);
-  }
-
-  .service-card:hover .service-icon-wrap {
-    background: var(--color-accent);
-    color: var(--bg-primary);
-    box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
-    transform: scale(1.05);
-  }
-
-  .service-icon-wrap svg {
-    width: 1.75rem;
-    height: 1.75rem;
-  }
-
-  .service-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    letter-spacing: -0.01em;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    font-weight: 300;
-  }
-
-  /* Products Grid section */
-  .products-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .product-featured-card {
-    padding: 4rem;
-    position: relative;
-  }
-
-  .featured-badge {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: rgba(0, 240, 255, 0.1);
-    border: 1px solid rgba(0, 240, 255, 0.3);
-    color: var(--color-accent);
-    font-size: 0.65rem;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
-  }
-
-  .featured-content {
-    max-width: 700px;
-  }
-
-  .featured-content h3 {
-    font-size: 2.25rem;
-    font-weight: 800;
-    margin-bottom: 1.25rem;
-    letter-spacing: -0.02em;
-  }
-
-  .featured-desc {
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    font-weight: 300;
-  }
-
-  .featured-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-bottom: 2.5rem;
-  }
-
-  .featured-tags span {
-    font-size: 0.75rem;
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-secondary);
-    padding: 0.35rem 0.85rem;
-    border-radius: 4px;
-  }
-
-  .modules-subgrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .module-card {
-    padding: 2.25rem;
-  }
-
-  .module-card h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-    color: #fff;
-    transition: var(--transition-smooth);
-  }
-
-  .module-card:hover h4 {
-    color: var(--color-accent);
-  }
-
-  .module-card p {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  /* Philosophy Quotes */
-  .philosophy-section {
-    background: radial-gradient(circle at center, rgba(11, 19, 41, 0.4) 0%, transparent 80%);
-  }
-
-  .philosophy-wrapper {
-    max-width: 960px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .quote-icon {
-    font-size: 8rem;
-    font-family: serif;
-    line-height: 1;
-    color: rgba(0, 240, 255, 0.15);
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-  }
-
-  .quote-slider {
-    margin-bottom: 5rem;
-  }
-
-  .quote-slide blockquote {
-    font-size: clamp(1.4rem, 3vw, 2.2rem);
-    font-weight: 300;
-    line-height: 1.5;
-    letter-spacing: -0.01em;
-    color: #fff;
-    margin-bottom: 1.5rem;
-  }
-
-  .quote-slide cite {
-    font-style: normal;
-    color: var(--color-accent);
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  .philosophy-pillars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2rem;
-    text-align: left;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 4rem;
-  }
-
-  .pillar-card h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 0.85rem;
-    position: relative;
-    padding-left: 1.25rem;
-  }
-
-  .pillar-card h3::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--color-accent);
-    box-shadow: 0 0 8px var(--color-accent);
-  }
-
-  .pillar-card p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-    line-height: 1.6;
-  }
-
-  /* Customers showcase grid */
-  .customers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 2rem;
-  }
-
-  .client-card {
-    padding: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-
-  .client-header {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .client-logo-img {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 8px;
-    background: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    object-fit: contain;
-    padding: 0.25rem;
-    transition: var(--transition-smooth);
-  }
-
-  .client-card:hover .client-logo-img {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: rgba(0, 240, 255, 0.4);
-    box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
-    transform: scale(1.05);
-  }
-
-  .client-header h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-  }
-
-  .client-desc {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    font-weight: 300;
-    margin-bottom: 2rem;
-  }
-
-  .client-tech {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-
-  /* Footer Area styling */
-  .main-footer {
-    border-top: 1px solid var(--border-color);
-    background: #02050c;
-    padding: 6rem 0 3rem 0;
-  }
-
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-
-  .footer-top {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 4rem;
-  }
-
-  .footer-brand {
-    max-width: 340px;
-  }
-
-  .footer-brand p {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin: 1.5rem 0;
-    font-weight: 300;
-  }
-
-  .contact-details p {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin: 0.25rem 0;
-  }
-
-  .footer-cols {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .footer-col h4 {
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #fff;
-    margin-bottom: 1.75rem;
-  }
-
-  .footer-col a {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin-bottom: 0.85rem;
-    transition: var(--transition-smooth);
-  }
-
-  .footer-col a:hover {
-    color: var(--color-accent);
-  }
-
-  .footer-divider {
-    border: none;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-  }
-
-  .footer-meta-links {
-    display: flex;
-    gap: 2rem;
-  }
-
-  .footer-meta-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: var(--transition-smooth);
-  }
-
-  .footer-meta-links a:hover {
-    color: var(--color-accent);
-  }
-
-  /* Responsive Adjustments */
-  @media (max-width: 1024px) {
-    .about-grid {
-      grid-template-columns: 1fr;
-      gap: 4rem;
-    }
-
-    .footer-top {
-      grid-template-columns: 1fr;
-      gap: 3rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .mobile-toggle {
-      display: flex;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .hero-actions {
-      flex-direction: column;
-      width: 100%;
-    }
-
-    .hero-actions a {
-      width: 100%;
-      text-align: center;
-      justify-content: center;
-    }
-
-    .footer-cols {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .footer-bottom {
-      flex-direction: column;
-      gap: 1.5rem;
-      text-align: center;
-    }
-  }
+	/* Header & Navigation (Nvidia White Style) */
+	.navbar {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--header-height);
+		background: #ffffff;
+		border-bottom: 1px solid #e5e7eb;
+		z-index: 100;
+		transition: var(--transition-smooth);
+	}
+
+	.navbar.scrolled {
+		background: rgba(255, 255, 255, 0.96);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+		border-bottom: 1px solid #e5e7eb;
+	}
+
+	.nav-container {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo-link {
+		display: flex;
+		align-items: center;
+		gap: 0.25rem;
+		text-decoration: none;
+	}
+
+	.logo-img {
+		height: 42px;
+		width: auto;
+		object-fit: contain;
+		filter: hue-rotate(195deg) saturate(1.3) brightness(1.1);
+		transition: var(--transition-smooth);
+	}
+
+	.logo-img:hover {
+		filter: hue-rotate(195deg) saturate(1.6) brightness(1.3)
+			drop-shadow(0 0 10px rgba(0, 240, 255, 0.4));
+	}
+
+	.nav-links {
+		display: flex;
+		align-items: center;
+		gap: 2.25rem;
+	}
+
+	.nav-item {
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: #4b5563;
+		text-decoration: none;
+		transition: var(--transition-smooth);
+		letter-spacing: 0.03em;
+	}
+
+	.nav-item:hover {
+		color: #000000;
+		text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Language Selector Styles (Nvidia Style) */
+	.lang-selector {
+		position: relative;
+		display: inline-block;
+	}
+
+	.lang-btn {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		font-size: 0.8rem;
+		font-weight: 600;
+		color: #4b5563;
+		padding: 0.5rem 0.65rem;
+		border-radius: 4px;
+		transition: var(--transition-smooth);
+	}
+
+	.lang-btn:hover {
+		color: #000000;
+		background: rgba(0, 0, 0, 0.03);
+	}
+
+	.globe-icon {
+		width: 1.05rem;
+		height: 1.05rem;
+	}
+
+	.arrow-icon {
+		width: 0.65rem;
+		height: 0.65rem;
+		transition: transform 0.3s ease;
+	}
+
+	.lang-selector.active .arrow-icon {
+		transform: rotate(180deg);
+	}
+
+	.lang-dropdown {
+		position: absolute;
+		top: 100%;
+		right: 0;
+		margin-top: 0.5rem;
+		background: #ffffff;
+		border: 1px solid #e5e7eb;
+		border-radius: 6px;
+		box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+		min-width: 140px;
+		display: flex;
+		flex-direction: column;
+		padding: 0.35rem;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-5px);
+		transition: var(--transition-smooth);
+		z-index: 110;
+	}
+
+	.lang-dropdown.show {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+	}
+
+	.lang-option {
+		background: transparent;
+		border: none;
+		text-align: left;
+		padding: 0.5rem 0.75rem;
+		font-size: 0.8rem;
+		font-weight: 500;
+		color: #374151;
+		cursor: pointer;
+		border-radius: 4px;
+		transition: var(--transition-smooth);
+		width: 100%;
+	}
+
+	.lang-option:hover {
+		background: rgba(59, 130, 246, 0.05);
+		color: #3b82f6;
+	}
+
+	.lang-option.active {
+		color: #3b82f6;
+		background: rgba(59, 130, 246, 0.08);
+		font-weight: 600;
+	}
+
+	/* i18n smooth transition fade */
+	.i18n-fade {
+		opacity: 0 !important;
+		transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+	}
+
+	.btn-nav {
+		font-size: 0.8rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #3b82f6;
+		text-decoration: none;
+		border: 1px solid rgba(59, 130, 246, 0.2);
+		padding: 0.5rem 1.25rem;
+		border-radius: 4px;
+		background: rgba(59, 130, 246, 0.03);
+		transition: var(--transition-smooth);
+	}
+
+	.btn-nav:hover {
+		background: #3b82f6;
+		color: #ffffff;
+		box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);
+		border-color: #3b82f6;
+	}
+
+	/* Mobile toggle button */
+	.mobile-toggle {
+		display: none;
+		flex-direction: column;
+		gap: 6px;
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 4px;
+	}
+
+	.mobile-toggle span {
+		width: 24px;
+		height: 2px;
+		background-color: #1f2937;
+		transition: var(--transition-smooth);
+	}
+
+	/* Mobile menu drawer */
+	.mobile-menu {
+		position: fixed;
+		top: var(--header-height);
+		left: 0;
+		width: 100%;
+		height: calc(100vh - var(--header-height));
+		background: rgba(3, 7, 18, 0.98);
+		backdrop-filter: blur(20px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 2rem;
+		opacity: 0;
+		pointer-events: none;
+		transform: translateY(-10px);
+		transition: var(--transition-smooth);
+		z-index: 99;
+	}
+
+	.mobile-menu.active {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0);
+	}
+
+	.mobile-nav-item {
+		font-size: 1.25rem;
+		color: var(--text-secondary);
+		text-decoration: none;
+		font-weight: 500;
+		transition: var(--transition-smooth);
+	}
+
+	.mobile-nav-item:hover {
+		color: var(--color-accent);
+	}
+
+	.mobile-btn {
+		border: 1px solid var(--color-accent);
+		padding: 0.75rem 2.5rem;
+		border-radius: 6px;
+		color: var(--color-accent);
+	}
+
+	/* Mobile Language Selector row */
+	.mobile-lang-row {
+		display: flex;
+		gap: 0.75rem;
+		justify-content: center;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+		padding: 1rem 0;
+		width: 70%;
+	}
+
+	.mobile-lang-btn {
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		color: var(--text-secondary);
+		font-size: 0.85rem;
+		font-weight: 600;
+		width: 3.2rem;
+		height: 2.2rem;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: var(--transition-smooth);
+	}
+
+	.mobile-lang-btn:hover {
+		color: #fff;
+		border-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.mobile-lang-btn.active {
+		background: #3b82f6;
+		color: #fff;
+		border-color: #3b82f6;
+		box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+	}
+
+	/* Cinematic Hero Slider (Nvidia Style) */
+	.hero-slider-section {
+		position: relative;
+		width: 100%;
+		height: 85vh;
+		min-height: 650px;
+		overflow: hidden;
+	}
+
+	.slider-container {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.hero-slide {
+		position: absolute;
+		inset: 0;
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		align-items: center;
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1),
+			visibility 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+		z-index: 1;
+	}
+
+	.hero-slide.active {
+		opacity: 1;
+		visibility: visible;
+		z-index: 2;
+	}
+
+	.hero-slide-content {
+		text-align: left;
+		max-width: 850px;
+		z-index: 10;
+	}
+
+	/* Slider arrows */
+	.slider-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(3, 7, 18, 0.45);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		color: #ffffff;
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		z-index: 10;
+		transition: var(--transition-smooth);
+		backdrop-filter: blur(10px);
+	}
+
+	.slider-arrow:hover {
+		background: #ffffff;
+		color: #000000;
+		box-shadow: 0 4px 15px rgba(255, 255, 255, 0.15);
+	}
+
+	.prev-arrow {
+		left: 2rem;
+	}
+
+	.next-arrow {
+		right: 2rem;
+	}
+
+	.slider-arrow svg {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+
+	/* Slide Indicators / Dots */
+	.slider-indicators {
+		position: absolute;
+		bottom: 2.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 0.75rem;
+		z-index: 10;
+	}
+
+	.indicator {
+		width: 40px;
+		height: 3px;
+		background: rgba(255, 255, 255, 0.2);
+		cursor: pointer;
+		border-radius: 10px;
+		transition: var(--transition-smooth);
+	}
+
+	.indicator.active {
+		background: var(--color-accent);
+		box-shadow: 0 0 8px var(--color-accent);
+		width: 60px;
+	}
+
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		background: rgba(11, 19, 41, 0.6);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		padding: 0.5rem 1.25rem;
+		border-radius: 100px;
+		margin-bottom: 2rem;
+		backdrop-filter: blur(10px);
+	}
+
+	.badge-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: var(--color-accent);
+		box-shadow: 0 0 10px var(--color-accent);
+		animation: pulse 1.8s infinite;
+	}
+
+	@keyframes pulse {
+		0% {
+			transform: scale(0.9);
+			opacity: 0.5;
+		}
+		50% {
+			transform: scale(1.2);
+			opacity: 1;
+		}
+		100% {
+			transform: scale(0.9);
+			opacity: 0.5;
+		}
+	}
+
+	.badge-txt {
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.15em;
+		color: var(--text-secondary);
+	}
+
+	.hero-title {
+		font-size: clamp(2.3rem, 4.5vw, 4rem);
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		margin-bottom: 1.5rem;
+	}
+
+	.hero-subtitle {
+		font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+		font-weight: 300;
+		color: var(--text-secondary);
+		max-width: 760px;
+		margin-bottom: 3rem;
+		line-height: 1.7;
+	}
+
+	.hero-actions {
+		display: flex;
+		gap: 1.25rem;
+		align-items: center;
+	}
+
+	/* Stats / Specs Section */
+	.stats-section {
+		background: linear-gradient(
+			180deg,
+			transparent 0%,
+			rgba(11, 19, 41, 0.5) 100%
+		);
+		border-y: 1px solid rgba(255, 255, 255, 0.02);
+		padding: 4rem 0;
+	}
+
+	.stats-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+		gap: 2rem;
+	}
+
+	.stat-card {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 1.5rem;
+		border-right: 1px solid rgba(255, 255, 255, 0.03);
+	}
+
+	.stat-card:last-child {
+		border-right: none;
+	}
+
+	.stat-label {
+		font-size: 0.65rem;
+		font-weight: 800;
+		color: var(--text-muted);
+		letter-spacing: 0.2em;
+		margin-bottom: 0.5rem;
+	}
+
+	.stat-number {
+		font-size: 3rem;
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		margin-bottom: 0.25rem;
+	}
+
+	.stat-desc {
+		font-size: 0.8rem;
+		color: var(--text-secondary);
+		font-weight: 400;
+	}
+
+	/* About grid section */
+	.about-grid {
+		display: grid;
+		grid-template-columns: 1.1fr 0.9fr;
+		gap: 4rem;
+		align-items: center;
+	}
+
+	.about-bullets {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-top: 3rem;
+	}
+
+	.bullet-item {
+		display: flex;
+		gap: 1.25rem;
+	}
+
+	.bullet-icon {
+		flex-shrink: 0;
+		width: 2.75rem;
+		height: 2.75rem;
+		border-radius: 8px;
+		background: rgba(0, 240, 255, 0.08);
+		border: 1px solid rgba(0, 240, 255, 0.2);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-accent);
+	}
+
+	.bullet-icon svg {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+
+	.bullet-text h3 {
+		font-size: 1.1rem;
+		font-weight: 600;
+		margin-bottom: 0.35rem;
+	}
+
+	.bullet-text p {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		font-weight: 300;
+	}
+
+	.skills-card {
+		padding: 3rem;
+	}
+
+	.skills-title {
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin-bottom: 2.5rem;
+		letter-spacing: -0.01em;
+	}
+
+	.skill-bar-wrap {
+		margin-bottom: 2rem;
+	}
+
+	.skill-bar-wrap:last-child {
+		margin-bottom: 0;
+	}
+
+	.skill-info {
+		display: flex;
+		justify-content: space-between;
+		font-size: 0.85rem;
+		font-weight: 500;
+		color: var(--text-secondary);
+		margin-bottom: 0.65rem;
+	}
+
+	.skill-bar {
+		width: 100%;
+		height: 6px;
+		background: rgba(255, 255, 255, 0.05);
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.skill-progress {
+		height: 100%;
+		background: linear-gradient(
+			90deg,
+			var(--color-accent-blue) 0%,
+			var(--color-accent) 100%
+		);
+		border-radius: 10px;
+	}
+
+	/* Services section layout */
+	.services-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+		gap: 2rem;
+	}
+
+	.service-card {
+		padding: 3rem 2.5rem;
+	}
+
+	.service-icon-wrap {
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 10px;
+		background: rgba(0, 240, 255, 0.08);
+		border: 1px solid rgba(0, 240, 255, 0.15);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-accent);
+		margin-bottom: 2rem;
+		transition: var(--transition-smooth);
+	}
+
+	.service-card:hover .service-icon-wrap {
+		background: var(--color-accent);
+		color: var(--bg-primary);
+		box-shadow: 0 0 20px rgba(0, 240, 255, 0.4);
+		transform: scale(1.05);
+	}
+
+	.service-icon-wrap svg {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
+
+	.service-card h3 {
+		font-size: 1.25rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		letter-spacing: -0.01em;
+	}
+
+	.service-card p {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		line-height: 1.7;
+		font-weight: 300;
+	}
+
+	/* Products Grid section */
+	.products-grid {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 2.5rem;
+	}
+
+	.product-featured-card {
+		padding: 4rem;
+		position: relative;
+	}
+
+	.featured-badge {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		background: rgba(0, 240, 255, 0.1);
+		border: 1px solid rgba(0, 240, 255, 0.3);
+		color: var(--color-accent);
+		font-size: 0.65rem;
+		font-weight: 800;
+		letter-spacing: 0.15em;
+		padding: 0.4rem 1rem;
+		border-radius: 100px;
+	}
+
+	.featured-content {
+		max-width: 700px;
+	}
+
+	.featured-content h3 {
+		font-size: 2.25rem;
+		font-weight: 800;
+		margin-bottom: 1.25rem;
+		letter-spacing: -0.02em;
+	}
+
+	.featured-desc {
+		color: var(--text-secondary);
+		font-size: 1.05rem;
+		line-height: 1.7;
+		margin-bottom: 2rem;
+		font-weight: 300;
+	}
+
+	.featured-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.featured-tags span {
+		font-size: 0.75rem;
+		font-weight: 600;
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		color: var(--text-secondary);
+		padding: 0.35rem 0.85rem;
+		border-radius: 4px;
+	}
+
+	.modules-subgrid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 1.5rem;
+	}
+
+	.module-card {
+		padding: 2.25rem;
+	}
+
+	.module-card h4 {
+		font-size: 1.1rem;
+		font-weight: 700;
+		margin-bottom: 0.75rem;
+		color: #fff;
+		transition: var(--transition-smooth);
+	}
+
+	.module-card:hover h4 {
+		color: var(--color-accent);
+	}
+
+	.module-card p {
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		line-height: 1.6;
+		font-weight: 300;
+	}
+
+	/* Philosophy Quotes */
+	.philosophy-section {
+		background: radial-gradient(
+			circle at center,
+			rgba(11, 19, 41, 0.4) 0%,
+			transparent 80%
+		);
+	}
+
+	.philosophy-wrapper {
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.quote-icon {
+		font-size: 8rem;
+		font-family: serif;
+		line-height: 1;
+		color: rgba(0, 240, 255, 0.15);
+		height: 4rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 1rem;
+	}
+
+	.quote-slider {
+		margin-bottom: 5rem;
+	}
+
+	.quote-slide blockquote {
+		font-size: clamp(1.4rem, 3vw, 2.2rem);
+		font-weight: 300;
+		line-height: 1.5;
+		letter-spacing: -0.01em;
+		color: #fff;
+		margin-bottom: 1.5rem;
+	}
+
+	.quote-slide cite {
+		font-style: normal;
+		color: var(--color-accent);
+		font-size: 0.9rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+	}
+
+	.philosophy-pillars {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		gap: 2rem;
+		text-align: left;
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		padding-top: 4rem;
+	}
+
+	.pillar-card h3 {
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin-bottom: 0.85rem;
+		position: relative;
+		padding-left: 1.25rem;
+	}
+
+	.pillar-card h3::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: var(--color-accent);
+		box-shadow: 0 0 8px var(--color-accent);
+	}
+
+	.pillar-card p {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		font-weight: 300;
+		line-height: 1.6;
+	}
+
+	/* Customers showcase grid */
+	.customers-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+		gap: 2rem;
+	}
+
+	.client-card {
+		padding: 2.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	.client-header {
+		display: flex;
+		align-items: center;
+		gap: 1.25rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.client-logo-img {
+		width: 3.5rem;
+		height: 3.5rem;
+		border-radius: 8px;
+		background: #ffffff;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		object-fit: contain;
+		padding: 0.25rem;
+		transition: var(--transition-smooth);
+	}
+
+	.client-card:hover .client-logo-img {
+		background: rgba(255, 255, 255, 0.95);
+		border-color: rgba(0, 240, 255, 0.4);
+		box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+		transform: scale(1.05);
+	}
+
+	.client-header h4 {
+		font-size: 1.1rem;
+		font-weight: 700;
+	}
+
+	.client-desc {
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		line-height: 1.6;
+		font-weight: 300;
+		margin-bottom: 2rem;
+	}
+
+	.client-tech {
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: var(--text-muted);
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+
+	/* Footer Area styling */
+	.main-footer {
+		border-top: 1px solid var(--border-color);
+		background: #02050c;
+		padding: 6rem 0 3rem 0;
+	}
+
+	.footer-content {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+
+	.footer-top {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 4rem;
+	}
+
+	.footer-brand {
+		max-width: 340px;
+	}
+
+	.footer-brand p {
+		font-size: 0.9rem;
+		color: var(--text-secondary);
+		margin: 1.5rem 0;
+		font-weight: 300;
+	}
+
+	.contact-details p {
+		font-size: 0.85rem;
+		color: var(--text-muted);
+		margin: 0.25rem 0;
+	}
+
+	.footer-cols {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	.footer-col h4 {
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #fff;
+		margin-bottom: 1.75rem;
+	}
+
+	.footer-col a {
+		display: block;
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		text-decoration: none;
+		margin-bottom: 0.85rem;
+		transition: var(--transition-smooth);
+	}
+
+	.footer-col a:hover {
+		color: var(--color-accent);
+	}
+
+	.footer-divider {
+		border: none;
+		height: 1px;
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.footer-bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 0.8rem;
+		color: var(--text-muted);
+	}
+
+	.footer-meta-links {
+		display: flex;
+		gap: 2rem;
+	}
+
+	.footer-meta-links a {
+		color: var(--text-muted);
+		text-decoration: none;
+		transition: var(--transition-smooth);
+	}
+
+	.footer-meta-links a:hover {
+		color: var(--color-accent);
+	}
+
+	/* Responsive Adjustments */
+	@media (max-width: 1024px) {
+		.about-grid {
+			grid-template-columns: 1fr;
+			gap: 4rem;
+		}
+
+		.footer-top {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+	}
+
+	@media (max-width: 768px) {
+		.mobile-toggle {
+			display: flex;
+		}
+
+		.nav-links {
+			display: none;
+		}
+
+		.hero-actions {
+			flex-direction: column;
+			width: 100%;
+		}
+
+		.hero-actions a {
+			width: 100%;
+			text-align: center;
+			justify-content: center;
+		}
+
+		.footer-cols {
+			grid-template-columns: 1fr;
+			gap: 2.5rem;
+		}
+
+		.footer-bottom {
+			flex-direction: column;
+			gap: 1.5rem;
+			text-align: center;
+		}
+	}
 </style>
