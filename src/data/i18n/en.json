@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "about": "About Us",
+    "services": "Services",
+    "products": "Products",
+    "philosophy": "Philosophy",
+    "customers": "Clients",
+    "contact": "Contact"
+  },
+  "hero": {
+    "slide1": {
+      "badge": "PXP FRAMEWORK & AGILE ENGINEERING",
+      "title1": "Enterprise Software",
+      "title2": "Architecture",
+      "subtitle": "We build critical high-availability platforms and decouple monoliths into robust microservices using our own open-source modular framework.",
+      "cta1": "ERP Modules",
+      "cta2": "Our Services"
+    },
+    "slide2": {
+      "badge": "A.I. COGNITION & AUTOMATION PIPELINES",
+      "title1": "Artificial Intelligence &",
+      "title2": "Data Flows",
+      "subtitle": "We automate critical corporate decision-making using predictive algorithms, risk analysis, and intelligent business information processing.",
+      "cta1": "Business Intelligence",
+      "cta2": "Success Cases"
+    }
+  },
+  "stats": {
+    "commits": { "label": "SOURCE CODE", "desc": "Active commits across platforms" },
+    "engineers": { "label": "ENGINEERING", "desc": "Specialized collaborators" },
+    "experience": { "label": "EXPERIENCE", "desc": "Years leading the market" },
+    "coffee": { "label": "ENERGY", "desc": "Cups of coffee consumed" }
+  },
+  "about": {
+    "tag": "About Us",
+    "title": "High-performance IT solutions",
+    "subtitle": "Kplian provides specialized consulting services to establish the technological pillars that support our clients' growth and corporate technological progress.",
+    "bullet1": {
+      "title": "Open Source Specialization",
+      "desc": "We offer products of the highest quality, optimizing costs by avoiding restrictive proprietary licenses and hidden expenses."
+    },
+    "bullet2: ": {
+      "title": "Cutting-edge Technology",
+      "desc": "We develop customized solutions using advanced methodologies and languages tailored to your business."
+    },
+    "skills": {
+      "title": "Technical Capabilities",
+      "skill1": "Software Development",
+      "skill2": "VoIP Phone Systems",
+      "skill3": "Cloud & Mobile Architecture",
+      "skill4": "Premium Web Design"
+    }
+  },
+  "services": {
+    "tag": "Professional Services",
+    "title": "What we do?",
+    "subtitle": "We accompany your organization with a complete portfolio of IT consulting and custom software.",
+    "item1": {
+      "title": "Enterprise Resource Planning (ERP)",
+      "desc": "We know that software must adapt to companies and not the other way around. We have extensive experience in the development and implementation of integrated ERP modules for large corporations."
+    },
+    "item2": {
+      "title": "Software Design & Development",
+      "desc": "Specific needs require custom development. We have agile and innovative processes executed by a team of senior engineers focused on high quality standards."
+    },
+    "item3": {
+      "title": "Responsive Web Design",
+      "desc": "We create fluid interactive interfaces that work on computers and mobile devices. Using clean native code, guaranteeing speed and stellar performance."
+    },
+    "item4": {
+      "title": "Business Intelligence (BI)",
+      "desc": "We facilitate accurate and rapid decision-making. We provide BI services under the principle of \"correct information in a timely, transparent, and clear manner\"."
+    },
+    "item5": {
+      "title": "Information Security",
+      "desc": "Comprehensive risk analysis and corporate computer security. We accompany you in threat identification, vulnerability mitigation, and secure deployment."
+    },
+    "item6": {
+      "title": "VoIP Phone Systems",
+      "desc": "We plan, provision, and implement corporate Unified Communication solutions and robust VoIP platforms adapted to the size and demand of your business."
+    }
+  },
+  "products": {
+    "tag": "Technological Ecosystem",
+    "title": "Our Products",
+    "subtitle": "Modular software architecture and agile development frameworks created in-house.",
+    "featured": {
+      "badge": "FLAGSHIP FRAMEWORK",
+      "title": "PXP Framework",
+      "desc": "Our leading open-source framework designed for the rapid and integrated development of web applications and critical corporate platforms. Based on clean, modular architectures and optimized for relational databases like PostgreSQL.",
+      "cta": "View on GitHub"
+    },
+    "item1": { "title": "Computerized Invoicing", "desc": "Robust tax emission module, approved under current local regulations." },
+    "item2": { "title": "Queue Management", "desc": "Monitoring, distribution, and optimization of customer service in real-time." },
+    "item3": { "title": "Accounting & Budgeting", "desc": "Integrated financial statements, budgetary control, and live balance sheets." },
+    "item4": { "title": "Fixed Assets & Warehouses", "desc": "Valuation tracking, depreciation, and strict inventory control." },
+    "item5": { "title": "Payroll & HR", "desc": "Accurate calculation of salaries, tax contribution sheets, and employment history." },
+    "item6": { "title": "Document Management (Core)", "desc": "Structuring of document flows, digital signatures, and corporate history." }
+  },
+  "philosophy": {
+    "quote": "We listen to your needs, study them, and propose a solution. We develop customized software for your company and fully accompany you in the corporate implementation process.",
+    "author": "— KPLIAN Core Philosophy",
+    "pillar1": { "title": "Uniqueness", "desc": "Each company is unique and needs software solutions that respond precisely to its own operational identity." },
+    "pillar2: ": { "title": "Value Creation", "desc": "We believe that information technology must be the primary catalyst for business efficiency and profitability." },
+    "pillar3: ": { "title": "Adaptability", "desc": "The software is what must mold itself and optimize the company's processes, never the other way around." }
+  },
+  "customers": {
+    "tag": "Corporate Guarantee",
+    "title": "Trusted Clients",
+    "subtitle": "Critical information systems successfully implemented in major corporations in the country.",
+    "client1": { "desc": "Development and Implementation of ERP-BOA with Accounting, Budgeting, Warehouses, Human Resources, Fixed Assets, and Treasury modules." },
+    "client2": { "desc": "Implementation and adaptation of Warehouse, HR, and Fixed Assets modules of the centralized ERP along with custom billing." },
+    "client3": { "desc": "Specialized design and implementation of the critical control and Industrial Maintenance system for the hydrocarbon logistics chain." },
+    "client4": { "desc": "Complete implementation of the ERP-PXP Financial Administrative System for the control of operations of the national electric grid." },
+    "client5": { "desc": "Technical training service and advanced consulting in comprehensive modules of ERP PXP (Security, Workflows, Purchasing)." },
+    "client6": { "desc": "Architecture and development of mobile solutions and database integrations for international hotel systems." }
+  },
+  "footer": {
+    "brand": "High-level technological pillars for the development of scalable and corporate software solutions.",
+    "col1": { "title": "Solutions" },
+    "col2": { "title": "Ecosystem", "item2": "Open Source Code", "item3": "ERP Modules", "item4": "Cloud Services" },
+    "col3": { "title": "Corporate", "item2": "Work Philosophy", "item3": "Trusted Clients" },
+    "rights": "All rights reserved. Cochabamba, Bolivia.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

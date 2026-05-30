@@ -24,12 +24,12 @@
     "defaultDesc": "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos."
   },
   {
-    "id": "ende",
+    "id": "etr",
     "logoUrl": "/clientes/etr.png",
     "name": "ENDE Transmisión",
     "i18nKey": "customers.client4",
     "tech": "PXP Framework • PostgreSQL • PHP",
-    "defaultDesc": "Implementación completa del Sistema Administrativo Financiero ERP-BOA para el control de operaciones de la red eléctrica nacional."
+    "defaultDesc": "Implementación completa del Sistema Administrativo Financiero ERP-PXP para el control de operaciones de la red eléctrica nacional."
   },
   {
     "id": "ofep",

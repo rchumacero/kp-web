@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "services": "Servicios",
+    "products": "Productos",
+    "philosophy": "Filosofía",
+    "customers": "Clientes",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "slide1": {
+      "badge": "PXP FRAMEWORK & INGENIERÍA ÁGIL",
+      "title1": "Arquitectura de Software",
+      "title2": "Empresarial",
+      "subtitle": "Construimos plataformas críticas de alta disponibilidad y desacoplamos monolitos hacia microservicios robustos utilizando nuestro propio framework modular Open Source.",
+      "cta1": "Módulos ERP",
+      "cta2": "Nuestros Servicios"
+    },
+    "slide2": {
+      "badge": "A.I. COGNICIÓN & PIPELINES DE AUTOMATIZACIÓN",
+      "title1": "Inteligencia Artificial y",
+      "title2": "Flujos de Datos",
+      "subtitle": "Automatizamos la toma de decisiones críticas corporativas mediante algoritmos predictivos, análisis de riesgos y procesamiento inteligente de información empresarial.",
+      "cta1": "Inteligencia de Negocios",
+      "cta2": "Casos de Éxito"
+    }
+  },
+  "stats": {
+    "commits": { "label": "CÓDIGO FUENTE", "desc": "Commits activos en plataformas" },
+    "engineers": { "label": "INGENIERÍA", "desc": "Colaboradores especializados" },
+    "experience": { "label": "EXPERIENCIA", "desc": "Años liderando el mercado" },
+    "coffee": { "label": "ENERGÍA", "desc": "Tazas de café consumidas" }
+  },
+  "about": {
+    "tag": "Sobre Nosotros",
+    "title": "Soluciones informáticas de alto rendimiento",
+    "subtitle": "Kplian brinda servicios de consultoría especializada para establecer los pilares tecnológicos que sustentan el crecimiento de nuestros clientes y el progreso tecnológico corporativo.",
+    "bullet1": {
+      "title": "Especialización en Open Source",
+      "desc": "Ofrecemos productos de la más alta calidad optimizando costos al evitar licencias propietarias restrictivas y gastos ocultos."
+    },
+    "bullet2: ": {
+      "title": "Tecnología de Vanguardia",
+      "desc": "Desarrollamos soluciones personalizadas utilizando metodologías y lenguajes avanzados adaptados a tu negocio."
+    },
+    "skills": {
+      "title": "Capacidades Técnicas",
+      "skill1": "Desarrollo de Software",
+      "skill2": "Centrales Telefónicas (VoIP)",
+      "skill3": "Arquitectura Cloud & Mobile",
+      "skill4": "Diseño Web Premium"
+    }
+  },
+  "services": {
+    "tag": "Servicios Profesionales",
+    "title": "¿Qué es lo que hacemos?",
+    "subtitle": "Acompañamos a su organización con un portafolio completo de consultoría de TI y software personalizado.",
+    "item1": {
+      "title": "Enterprise Resource Planning (ERP)",
+      "desc": "Sabemos que el software debe adaptarse a las empresas y no al revés. Contamos con amplia experiencia en el desarrollo e implantación de módulos ERP integrados para grandes corporaciones."
+    },
+    "item2": {
+      "title": "Diseño y Desarrollo de Software",
+      "desc": "Necesidades específicas exigen desarrollo a la medida. Contamos con procesos ágiles e innovadores ejecutados por un equipo de ingenieros senior enfocado en altos estándares de calidad."
+    },
+    "item3": {
+      "title": "Diseño Web Responsivo",
+      "desc": "Creamos interfaces interactivas fluidas que funcionan en computadoras y dispositivos móviles. Con código nativo limpio, garantizando velocidad y rendimiento estelar."
+    },
+    "item4": {
+      "title": "Inteligencia de Negocios (BI)",
+      "desc": "Facilitamos la toma de decisiones precisas y rápidas. Proveemos servicios de BI bajo el principio de \"información correcta de manera oportuna, transparente y clara\"."
+    },
+    "item5": {
+      "title": "Seguridad de Información",
+      "desc": "Análisis de riesgos y seguridad informática empresarial integral. Le acompañamos en la identificación de amenazas, vulnerabilidades, mitigación y despliegue seguro."
+    },
+    "item6": {
+      "title": "Centrales Telefónicas VoIP",
+      "desc": "Planificamos, provisionamos e implementamos soluciones corporativas de Comunicación Unificada y plataformas VoIP robustas adaptadas al tamaño y exigencia de su negocio."
+    }
+  },
+  "products": {
+    "tag": "Ecosistema Tecnológico",
+    "title": "Nuestros Productos",
+    "subtitle": "Arquitectura modular de software y frameworks de desarrollo ágil creados internamente.",
+    "featured": {
+      "badge": "FLAGSHIP FRAMEWORK",
+      "title": "Framework PXP",
+      "desc": "Nuestro framework open-source líder diseñado para el desarrollo rápido e integrado de aplicaciones web y plataformas corporativas críticas. Basado en arquitecturas limpias, modulares y optimizado para bases de datos relacionales como PostgreSQL.",
+      "cta": "Ver en GitHub"
+    },
+    "item1": { "title": "Facturación Computarizada", "desc": "Módulo de emisión fiscal robusto, homologado con la normativa local vigente." },
+    "item2": { "title": "Gestión de Colas", "desc": "Monitoreo, distribución y optimización de la atención al cliente en tiempo real." },
+    "item3": { "title": "Contabilidad y Presupuestos", "desc": "Estados financieros integrados, control presupuestario y balances en vivo." },
+    "item4": { "title": "Activos Fijos y Almacenes", "desc": "Seguimiento de valorización, depreciación y control estricto de inventarios." },
+    "item5": { "title": "Planillas & Recursos Humanos", "desc": "Cálculo exacto de salarios, planillas de aportes fiscales e historial laboral." },
+    "item6": { "title": "Gestión Documental (Core)", "desc": "Estructuración de flujos documentales, firmas digitales e histórico corporativo." }
+  },
+  "philosophy": {
+    "quote": "Escuchamos sus necesidades, las estudiamos y planteamos una solución. Desarrollamos el software a la medida de su empresa y le acompañamos plenamente en el proceso de implantación corporativo.",
+    "author": "— Filosofía Fundamental KPLIAN",
+    "pillar1": { "title": "Singularidad", "desc": "Cada empresa es única y necesita soluciones de software que respondan con precisión a su propia identidad operativa." },
+    "pillar2: ": { "title": "Creación de Valor", "desc": "Creemos que la tecnología de información debe ser el catalizador principal de la eficiencia y la rentabilidad empresarial." },
+    "pillar3: ": { "title": "Adaptabilidad", "desc": "El software es el que debe amoldarse y optimizar los procesos de la empresa, nunca a la inversa." }
+  },
+  "customers": {
+    "tag": "Garantía Corporativa",
+    "title": "Clientes de Confianza",
+    "subtitle": "Sistemas críticos de información implantados con éxito en importantes corporaciones del país.",
+    "client1": { "desc": "Desarrollo e Implementación del ERP-BOA con los módulos de Contabilidad, Presupuestos, Almacenes, Recursos Humanos, Activos Fijos y Tesorería." },
+    "client2": { "desc": "Implementación y adecuación de módulos de Almacenes, Recursos Humanos y Activos Fijos del ERP centralizado junto a facturación a medida." },
+    "client3": { "desc": "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos." },
+    "client4": { "desc": "Implementación completa del Sistema Administrativo Financiero ERP-PXP para el control de operaciones de la red eléctrica nacional." },
+    "client5": { "desc": "Servicio de formación técnica y consultoría avanzada en módulos integrales del ERP PXP (Seguridad, Flujos de Trabajo, Compras)." },
+    "client6": { "desc": "Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales." }
+  },
+  "footer": {
+    "brand": "Pilares tecnológicos de alto nivel para el desarrollo de soluciones de software escalables y corporativas.",
+    "col1": { "title": "Soluciones" },
+    "col2": { "title": "Ecosistema", "item2": "Código Open Source", "item3": "Módulos ERP", "item4": "Servicios en la Nube" },
+    "col3": { "title": "Corporativo", "item2": "Filosofía de Trabajo", "item3": "Clientes de Confianza" },
+    "rights": "Todos los derechos reservados. Cochabamba, Bolivia.",
+    "privacy": "Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "about": "Sobre Nós",
+    "services": "Serviços",
+    "products": "Produtos",
+    "philosophy": "Filosofia",
+    "customers": "Clientes",
+    "contact": "Contato"
+  },
+  "hero": {
+    "slide1": {
+      "badge": "PXP FRAMEWORK & ENGENHARIA ÁGIL",
+      "title1": "Arquitetura de Software",
+      "title2": "Corporativo",
+      "subtitle": "Construímos plataformas críticas de alta disponibilidade e desacoplamos monólitos em microsserviços robustos usando nosso próprio framework modular de código aberto.",
+      "cta1": "Módulos ERP",
+      "cta2": "Nossos Serviços"
+    },
+    "slide2": {
+      "badge": "A.I. COGNIÇÃO & PIPELINES DE AUTOMAÇÃO",
+      "title1": "Inteligência Artificial e",
+      "title2": "Fluxos de Dados",
+      "subtitle": "Automatizamos a tomada de decisões corporativas críticas usando algoritmos preditivos, análise de risco e processamento inteligente de informações de negócios.",
+      "cta1": "Inteligência de Negócios",
+      "cta2": "Casos de Sucesso"
+    }
+  },
+  "stats": {
+    "commits": {
+      "label": "CÓDIGO FONTE",
+      "desc": "Commits activos em plataformas"
+    },
+    "engineers": {
+      "label": "ENGENHARIA",
+      "desc": "Colaboradores especializados"
+    },
+    "experience": {
+      "label": "EXPERIÊNCIA",
+      "desc": "Anos liderando o mercado"
+    },
+    "coffee": {
+      "label": "ENERGIA",
+      "desc": "Xícaras de café consumidas"
+    }
+  },
+  "about": {
+    "tag": "Sobre Nós",
+    "title": "Soluções de TI de alto desempenho",
+    "subtitle": "A Kplian oferece serviços de consultoria especializada para estabelecer os pilares tecnológicos que sustentam o crescimento de nossos clientes e o progresso tecnológico corporativo.",
+    "bullet1": {
+      "title": "Especialização em Código Aberto",
+      "desc": "Oferecemos produtos de alta qualidade, otimizando custos ao evitar licenças proprietárias restritivas e despesas ocultas."
+    },
+    "bullet2": {
+      "title": "Tecnologia de Ponta",
+      "desc": "Desenvolvemos soluções personalizadas utilizando metodologias e linguagens avançadas adaptadas ao seu negócio."
+    },
+    "skills": {
+      "title": "Capacidades Técnicas",
+      "skill1": "Desenvolvimento de Software",
+      "skill2": "Centrais Telefônicas (VoIP)",
+      "skill3": "Arquitetura Cloud & Mobile",
+      "skill4": "Design Web Premium"
+    }
+  },
+  "services": {
+    "tag": "Serviços Profissionais",
+    "title": "O que nós fazemos?",
+    "subtitle": "Acompanhamos sua organização com um portfólio completo de consultoria de TI e software customizado.",
+    "item1": {
+      "title": "Enterprise Resource Planning (ERP)",
+      "desc": "Sabemos que o software deve se adaptar às empresas e não o contrário. Temos ampla experiência no desenvolvimento e implementação de módulos ERP integrados para grandes corporações."
+    },
+    "item2": {
+      "title": "Design e Desenvolvimento de Software",
+      "desc": "Necessidades específicas exigem desenvolvimento sob medida. Temos processos ágeis e inovadores executados por uma equipe de engenheiros seniores focada em altos padrões de qualidade."
+    },
+    "item3": {
+      "title": "Design Web Responsivo",
+      "desc": "Criamos interfaces interativas fluidas que funcionam em computadores e dispositivos móveis. Com código nativo limpo, garantindo velocidade e desempenho estelares."
+    },
+    "item4": {
+      "title": "Inteligência de Negócios (BI)",
+      "desc": "Facilitamos a tomada de decisões precisas e rápidas. Oferecemos serviços de BI sob o princípio de \"informação correta de forma oportuna, transparente e clara\"."
+    },
+    "item5": {
+      "title": "Segurança da Informação",
+      "desc": "Análise de riscos e segurança de TI empresarial abrangente. Acompanhamos você na identificação de ameaças, vulnerabilidades, mitigação e implantação segura."
+    },
+    "item6": {
+      "title": "Centrais Telefônicas VoIP",
+      "desc": "Planejamos, provisionamos e implementamos soluções corporativas de Comunicação Unificada e plataformas VoIP robustas adaptadas ao tamanho e exigência do seu negócio."
+    }
+  },
+  "products": {
+    "tag": "Ecossistema Tecnológico",
+    "title": "Nossos Produtos",
+    "subtitle": "Arquitetura modular de software e frameworks de desenvolvimento ágil criados internamente.",
+    "featured": {
+      "badge": "FLAGSHIP FRAMEWORK",
+      "title": "Framework PXP",
+      "desc": "Nosso principal framework de código aberto projetado para o desenvolvimento rápido e integrado de aplicações web e plataformas corporativas críticas. Baseado em arquiteturas limpas e modulares e otimizado para bancos de dados relacionais como PostgreSQL.",
+      "cta": "Ver no GitHub"
+    },
+    "item1": {
+      "title": "Faturamento Computadorizado",
+      "desc": "Módulo de emissão fiscal robusto, homologado com a regulamentação local vigente."
+    },
+    "item2": {
+      "title": "Gestão de Filas",
+      "desc": "Monitoramento, distribution e otimização do atendimento ao cliente em tempo real."
+    },
+    "item3": {
+      "title": "Contabilidade e Orçamentos",
+      "desc": "Demonstrações financeiras integradas, controle orçamentário e balanços patrimoniais ao vivo."
+    },
+    "item4": {
+      "title": "Ativos Fixos e Armazéns",
+      "desc": "Acompanhamento de avaliação, depreciação e controle rigoroso de estoque."
+    },
+    "item5": {
+      "title": "Folha de Pagamento e RH",
+      "desc": "Cálculo exato de salários, planilhas de contribuição previdenciária e histórico de emprego."
+    },
+    "item6": {
+      "title": "Gestão Documental (Core)",
+      "desc": "Estruturação de fluxos de documentos, assinaturas digitais e histórico corporativo."
+    }
+  },
+  "philosophy": {
+    "quote": "Ouvimos as suas necessidades, estudamo-las e propomos uma solução. Desenvolvemos o software à medida da sua empresa e acompanhamo-lo totalmente no processo de implementação corporativa.",
+    "author": "— Filosofia Fundamental KPLIAN",
+    "pillar1": {
+      "title": "Singularidade",
+      "desc": "Cada empresa é única e precisa de soluções de software que respondam com precisão à sua própria identidade operacional."
+    },
+    "pillar2": {
+      "title": "Criação de Valor",
+      "desc": "Acreditamos que a tecnologia da informação deve ser o principal catalisador para a eficiência e rentabilidade dos negócios."
+    },
+    "pillar3": {
+      "title": "Adaptabilidade",
+      "desc": "O software é o que deve se moldar e otimizar os processos da empresa, nunca o contrário."
+    }
+  },
+  "customers": {
+    "tag": "Garantia Corporativa",
+    "title": "Clientes de Confiança",
+    "subtitle": "Sistemas de informação críticos implementados com sucesso em grandes corporações do país.",
+    "client1": {
+      "desc": "Desenvolvimento e Implementação do ERP-BOA con los módulos de Contabilidade, Orçamento, Armazéns, Recursos Humanos, Ativos Fixos e Tesouraria."
+    },
+    "client2": {
+      "desc": "Implementação e adaptação dos módulos de Armazém, Recursos Humanos e Ativos Fixos do ERP centralizado junto com faturamento sob medida."
+    },
+    "client3": {
+      "desc": "Projeto especializado e implementação do sistema de controle crítico e Manutenção Industrial para a cadeia de logística de hidrocarbonetos."
+    },
+    "client4": {
+      "desc": "Implementação completa del Sistema Administrativo Financeiro ERP-BOA para el control de las operaciones de la red eléctrica nacional."
+    },
+    "client5": {
+      "desc": "Serviço de treinamento técnico e consultoria avançada em módulos abrangentes do ERP PXP (Segurança, Fluxos de Trabalho, Compras)."
+    },
+    "client6": {
+      "desc": "Arquitetura e desenvolvimento de soluções móveis e integrações de banco de dados para sistemas de hotéis internacionais."
+    }
+  },
+  "footer": {
+    "brand": "Pilares tecnológicos de alto nível para o desenvolvimento de soluções de software escaláveis e corporativas.",
+    "col1": {
+      "title": "Soluções"
+    },
+    "col2": {
+      "title": "Ecossistema",
+      "item2": "Código de Fonte Aberta",
+      "item3": "Módulos ERP",
+      "item4": "Serviços em Nuvem"
+    },
+    "col3": {
+      "title": "Corporativo",
+      "item2": "Filosofia de Trabalho",
+      "item3": "Clientes de Confiança"
+    },
+    "rights": "Todos os direitos reservados. Cochabamba, Bolivia.",
+    "privacy": "Privacidade",
+    "terms": "Termos de Serviço"
+  }
+}
