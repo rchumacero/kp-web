@@ -1099,6 +1099,7 @@
 .scroll-wrapper {
 	position: relative;
 	width: 100%;
+	min-width: 0;
 }
 
 .scroll-btn {
