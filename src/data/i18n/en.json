@@ -90,6 +90,10 @@
     "item6": {
       "title": "VoIP Phone Systems",
       "desc": "We plan, provision, and implement corporate Unified Communication solutions and robust VoIP platforms adapted to the size and demand of your business."
+    },
+    "item7": {
+      "title": "Automations with n8n & Low-Code",
+      "desc": "We optimize your business processes by connecting your favorite applications and databases. We design automated data pipelines and workflows to eliminate repetitive manual tasks."
     }
   },
   "products": {

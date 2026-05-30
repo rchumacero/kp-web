@@ -7,6 +7,13 @@
     "defaultDesc": "Sabemos que el software debe adaptarse a las empresas y no al revés. Contamos con amplia experiencia en el desarrollo e implantación de módulos ERP integrados para grandes corporaciones."
   },
   {
+    "id": "n8n",
+    "i18nKey": "services.item7",
+    "icon": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11 4a2 2 0 114 0v1a2 2 0 01-2 2H3a2 2 0 01-2-2V4a2 2 0 012-2h6a2 2 0 012 2v1zM9 15v1a2 2 0 01-2 2H3a2 2 0 01-2-2v-1a2 2 0 012-2h2a2 2 0 012 2zm10 0v1a2 2 0 01-2 2h-4a2 2 0 01-2-2v-1a2 2 0 012-2h2a2 2 0 012 2zM12 7v4m-3 2v-2h6v2\"></path>",
+    "defaultTitle": "Automatizaciones con n8n & Low-Code",
+    "defaultDesc": "Optimizamos sus procesos de negocio conectando sus aplicaciones y bases de datos favoritas. Diseñamos pipelines de datos y flujos de trabajo automatizados para eliminar tareas manuales repetitivas."
+  },
+  {
     "id": "dev",
     "i18nKey": "services.item2",
     "icon": "<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4\"></path>",

@@ -78,6 +78,10 @@
     "item6": {
       "title": "Centrales Telefónicas VoIP",
       "desc": "Planificamos, provisionamos e implementamos soluciones corporativas de Comunicación Unificada y plataformas VoIP robustas adaptadas al tamaño y exigencia de su negocio."
+    },
+    "item7": {
+      "title": "Automatizaciones con n8n & Low-Code",
+      "desc": "Optimizamos sus procesos de negocio conectando sus aplicaciones y bases de datos favoritas. Diseñamos pipelines de datos y flujos de trabajo automatizados para eliminar tareas manuales repetitivas."
     }
   },
   "products": {
