@@ -1,6 +1,9 @@
 ---
 // src/pages/index.astro
 import Layout from "../layouts/Layout.astro";
+
+const currentYear = new Date().getFullYear();
+const yearsOfExperience = currentYear - 2012;
 ---
 
 <Layout
@@ -324,7 +327,7 @@ import Layout from "../layouts/Layout.astro";
 					<span class="stat-label" data-i18n="stats.experience.label"
 						>EXPERIENCIA</span
 					>
-					<span class="stat-number cyan-blue-gradient">11+</span>
+					<span class="stat-number cyan-blue-gradient">{yearsOfExperience}+</span>
 					<span class="stat-desc" data-i18n="stats.experience.desc"
 						>Años liderando el mercado</span
 					>
