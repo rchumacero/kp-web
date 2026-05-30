@@ -164,6 +164,12 @@
     },
     "client6": {
       "desc": "Arquitetura e desenvolvimento de soluções móveis e integrações de banco de dados para sistemas de hotéis internacionais."
+    },
+    "client7": {
+      "desc": "Apoio na implementação do ERP-PXP com os módulos de Almoxarifado, Ativos Fixos e Faturamento."
+    },
+    "client8": {
+      "desc": "Arquitetura e desenvolvimento de sistemas baseados em nuvem para startups, grandes corporações públicas e instituições federais."
     }
   },
   "footer": {

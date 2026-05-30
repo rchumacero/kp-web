@@ -113,7 +113,9 @@
     "client3": { "desc": "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos." },
     "client4": { "desc": "Implementación completa del Sistema Administrativo Financiero ERP-PXP para el control de operaciones de la red eléctrica nacional." },
     "client5": { "desc": "Servicio de formación técnica y consultoría avanzada en módulos integrales del ERP PXP (Seguridad, Flujos de Trabajo, Compras)." },
-    "client6": { "desc": "Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales." }
+    "client6": { "desc": "Arquitectura y desarrollo de soluciones móviles e integraciones de bases de datos para sistemas hoteleros internacionales." },
+    "client7": { "desc": "Apoyo en la implementación del ERP-PXP con los módulos de Almacenes, Activos Fijos y Facturación." },
+    "client8": { "desc": "Diseño y desarrollo de sistemas basados en la nube para pequeñas empresas emergentes, grandes corporaciones públicas e instituciones federales." }
   },
   "footer": {
     "brand": "Pilares tecnológicos de alto nivel para el desarrollo de soluciones de software escalables y corporativas.",

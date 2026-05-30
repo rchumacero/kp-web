@@ -26,10 +26,22 @@
     }
   },
   "stats": {
-    "commits": { "label": "SOURCE CODE", "desc": "Active commits across platforms" },
-    "engineers": { "label": "ENGINEERING", "desc": "Specialized collaborators" },
-    "experience": { "label": "EXPERIENCE", "desc": "Years leading the market" },
-    "coffee": { "label": "ENERGY", "desc": "Cups of coffee consumed" }
+    "commits": {
+      "label": "SOURCE CODE",
+      "desc": "Active commits across platforms"
+    },
+    "engineers": {
+      "label": "ENGINEERING",
+      "desc": "Specialized collaborators"
+    },
+    "experience": {
+      "label": "EXPERIENCE",
+      "desc": "Years leading the market"
+    },
+    "coffee": {
+      "label": "ENERGY",
+      "desc": "Cups of coffee consumed"
+    }
   },
   "about": {
     "tag": "About Us",
@@ -90,36 +102,92 @@
       "desc": "Our leading open-source framework designed for the rapid and integrated development of web applications and critical corporate platforms. Based on clean, modular architectures and optimized for relational databases like PostgreSQL.",
       "cta": "View on GitHub"
     },
-    "item1": { "title": "Computerized Invoicing", "desc": "Robust tax emission module, approved under current local regulations." },
-    "item2": { "title": "Queue Management", "desc": "Monitoring, distribution, and optimization of customer service in real-time." },
-    "item3": { "title": "Accounting & Budgeting", "desc": "Integrated financial statements, budgetary control, and live balance sheets." },
-    "item4": { "title": "Fixed Assets & Warehouses", "desc": "Valuation tracking, depreciation, and strict inventory control." },
-    "item5": { "title": "Payroll & HR", "desc": "Accurate calculation of salaries, tax contribution sheets, and employment history." },
-    "item6": { "title": "Document Management (Core)", "desc": "Structuring of document flows, digital signatures, and corporate history." }
+    "item1": {
+      "title": "Computerized Invoicing",
+      "desc": "Robust tax emission module, approved under current local regulations."
+    },
+    "item2": {
+      "title": "Queue Management",
+      "desc": "Monitoring, distribution, and optimization of customer service in real-time."
+    },
+    "item3": {
+      "title": "Accounting & Budgeting",
+      "desc": "Integrated financial statements, budgetary control, and live balance sheets."
+    },
+    "item4": {
+      "title": "Fixed Assets & Warehouses",
+      "desc": "Valuation tracking, depreciation, and strict inventory control."
+    },
+    "item5": {
+      "title": "Payroll & HR",
+      "desc": "Accurate calculation of salaries, tax contribution sheets, and employment history."
+    },
+    "item6": {
+      "title": "Document Management (Core)",
+      "desc": "Structuring of document flows, digital signatures, and corporate history."
+    }
   },
   "philosophy": {
     "quote": "We listen to your needs, study them, and propose a solution. We develop customized software for your company and fully accompany you in the corporate implementation process.",
     "author": "— KPLIAN Core Philosophy",
-    "pillar1": { "title": "Uniqueness", "desc": "Each company is unique and needs software solutions that respond precisely to its own operational identity." },
-    "pillar2: ": { "title": "Value Creation", "desc": "We believe that information technology must be the primary catalyst for business efficiency and profitability." },
-    "pillar3: ": { "title": "Adaptability", "desc": "The software is what must mold itself and optimize the company's processes, never the other way around." }
+    "pillar1": {
+      "title": "Uniqueness",
+      "desc": "Each company is unique and needs software solutions that respond precisely to its own operational identity."
+    },
+    "pillar2: ": {
+      "title": "Value Creation",
+      "desc": "We believe that information technology must be the primary catalyst for business efficiency and profitability."
+    },
+    "pillar3: ": {
+      "title": "Adaptability",
+      "desc": "The software is what must mold itself and optimize the company's processes, never the other way around."
+    }
   },
   "customers": {
     "tag": "Corporate Guarantee",
     "title": "Trusted Clients",
     "subtitle": "Critical information systems successfully implemented in major corporations in the country.",
-    "client1": { "desc": "Development and Implementation of ERP-BOA with Accounting, Budgeting, Warehouses, Human Resources, Fixed Assets, and Treasury modules." },
-    "client2": { "desc": "Implementation and adaptation of Warehouse, HR, and Fixed Assets modules of the centralized ERP along with custom billing." },
-    "client3": { "desc": "Specialized design and implementation of the critical control and Industrial Maintenance system for the hydrocarbon logistics chain." },
-    "client4": { "desc": "Complete implementation of the ERP-PXP Financial Administrative System for the control of operations of the national electric grid." },
-    "client5": { "desc": "Technical training service and advanced consulting in comprehensive modules of ERP PXP (Security, Workflows, Purchasing)." },
-    "client6": { "desc": "Architecture and development of mobile solutions and database integrations for international hotel systems." }
+    "client1": {
+      "desc": "Development and Implementation of ERP-BOA with Accounting, Budgeting, Warehouses, Human Resources, Fixed Assets, and Treasury modules."
+    },
+    "client2": {
+      "desc": "Implementation and adaptation of Warehouse, HR, and Fixed Assets modules of the centralized ERP along with custom billing."
+    },
+    "client3": {
+      "desc": "Specialized design and implementation of the critical control and Industrial Maintenance system for the hydrocarbon logistics chain."
+    },
+    "client4": {
+      "desc": "Complete implementation of the ERP-PXP Financial Administrative System for the control of operations of the national electric grid."
+    },
+    "client5": {
+      "desc": "Technical training service and advanced consulting in comprehensive modules of ERP PXP (Security, Workflows, Purchasing)."
+    },
+    "client6": {
+      "desc": "Architecture and development of mobile solutions and database integrations for international hotel systems."
+    },
+    "client7": {
+      "desc": "Support in the implementation of the ERP-PXP with the modules of Warehouses, Fixed Assets and Billing."
+    },
+    "client8": {
+      "desc": "Architecting and solutioning cloud based systems for small startups,  large public corporations and  federal institutions."
+    }
   },
   "footer": {
     "brand": "High-level technological pillars for the development of scalable and corporate software solutions.",
-    "col1": { "title": "Solutions" },
-    "col2": { "title": "Ecosystem", "item2": "Open Source Code", "item3": "ERP Modules", "item4": "Cloud Services" },
-    "col3": { "title": "Corporate", "item2": "Work Philosophy", "item3": "Trusted Clients" },
+    "col1": {
+      "title": "Solutions"
+    },
+    "col2": {
+      "title": "Ecosystem",
+      "item2": "Open Source Code",
+      "item3": "ERP Modules",
+      "item4": "Cloud Services"
+    },
+    "col3": {
+      "title": "Corporate",
+      "item2": "Work Philosophy",
+      "item3": "Trusted Clients"
+    },
     "rights": "All rights reserved. Cochabamba, Bolivia.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"

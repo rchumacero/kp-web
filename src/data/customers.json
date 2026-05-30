@@ -1,11 +1,35 @@
 [
   {
+    "id": "egsa",
+    "logoUrl": "/clientes/egsa.png",
+    "name": "ENDE Guaracachi",
+    "i18nKey": "customers.client7",
+    "tech": "PXP Framework • PostgreSQL • PHP",
+    "defaultDesc": "Apoyo en la implementación del ERP-PXP con los módulos de Almacenes, Activos Fijos y Facturación."
+  },
+  {
+    "id": "effex",
+    "logoUrl": "/clientes/effex.png",
+    "name": "Effex",
+    "i18nKey": "customers.client8",
+    "tech": "NodeJs, NestJs, CRM, n8n, React, React Native",
+    "defaultDesc": "Diseño y desarrollo de sistemas basados ​​en la nube para pequeñas empresas emergentes, grandes corporaciones públicas e instituciones federales."
+  },
+  {
     "id": "boa",
     "logoUrl": "/clientes/boa.jpg",
     "name": "Boliviana de Aviación",
     "i18nKey": "customers.client1",
     "tech": "PXP Framework • PostgreSQL • JavaScript",
     "defaultDesc": "Desarrollo e Implementación del ERP-BOA con los módulos de Contabilidad, Presupuestos, Almacenes, Recursos Humanos, Activos Fijos y Tesorería."
+  },
+  {
+    "id": "etr",
+    "logoUrl": "/clientes/etr.png",
+    "name": "ENDE Transmisión",
+    "i18nKey": "customers.client4",
+    "tech": "PXP Framework • PostgreSQL • PHP",
+    "defaultDesc": "Implementación completa del Sistema Administrativo Financiero ERP-PXP para el control de operaciones de la red eléctrica nacional."
   },
   {
     "id": "comibol",
@@ -22,14 +46,6 @@
     "i18nKey": "customers.client3",
     "tech": "PXP Framework • PostgreSQL • PHP",
     "defaultDesc": "Diseño e implementación especializada del sistema de control y Mantenimiento Industrial crítico para la cadena logística de hidrocarburos."
-  },
-  {
-    "id": "etr",
-    "logoUrl": "/clientes/etr.png",
-    "name": "ENDE Transmisión",
-    "i18nKey": "customers.client4",
-    "tech": "PXP Framework • PostgreSQL • PHP",
-    "defaultDesc": "Implementación completa del Sistema Administrativo Financiero ERP-PXP para el control de operaciones de la red eléctrica nacional."
   },
   {
     "id": "ofep",
