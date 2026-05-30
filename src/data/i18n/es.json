@@ -105,8 +105,8 @@
     "quote": "Escuchamos sus necesidades, las estudiamos y planteamos una solución. Desarrollamos el software a la medida de su empresa y le acompañamos plenamente en el proceso de implantación corporativo.",
     "author": "— Filosofía Fundamental KPLIAN",
     "pillar1": { "title": "Singularidad", "desc": "Cada empresa es única y necesita soluciones de software que respondan con precisión a su propia identidad operativa." },
-    "pillar2: ": { "title": "Creación de Valor", "desc": "Creemos que la tecnología de información debe ser el catalizador principal de la eficiencia y la rentabilidad empresarial." },
-    "pillar3: ": { "title": "Adaptabilidad", "desc": "El software es el que debe amoldarse y optimizar los procesos de la empresa, nunca a la inversa." }
+    "pillar2": { "title": "Creación de Valor", "desc": "Creemos que la tecnología de información debe ser el catalizador principal de la eficiencia y la rentabilidad empresarial." },
+    "pillar3": { "title": "Adaptabilidad", "desc": "El software es el que debe amoldarse y optimizar los procesos de la empresa, nunca a la inversa." }
   },
   "customers": {
     "tag": "Garantía Corporativa",
